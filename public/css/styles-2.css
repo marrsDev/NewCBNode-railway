@@ -1,0 +1,1273 @@
+/* General Styles */
+body {
+
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #fcfcfc;
+}
+
+/* Ensure the body and HTML take full width */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Ensure all sections span the full width */
+section {
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+.main-header {
+    background: #1e2933; /* Updated color */
+    color: #fff;
+    padding: 20px 0;
+}
+
+.site-headline img {
+    height: 50px;
+}
+
+.main-navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-navigation ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+
+/* Add smooth transition to navigation links */
+.main-navigation ul li a {
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    background: #204665;
+    padding: 20px 0; /* Reduced padding to reduce space between header and logo */
+    text-align: left;
+    width: 100%;
+}
+
+/* Container for centering content */
+.container {
+    width: 100%;
+    max-width: 1200px; /* Adjust this value as needed */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Add padding to prevent content from touching the edges */
+    box-sizing: border-box; /* Include padding in the container's width */
+}
+
+
+/* Top row: Logo and Box */
+.hero-top-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-between; /* Logo on the left, box on the right */
+    align-items: center; /* Vertically center logo and box */
+    gap: 10px; /* Add space between logo and buttons */
+    width: 100%;
+}
+
+.site-headline {
+    flex: 0 0 auto; /* Prevent stretching */
+    padding-left: 10px; /* Reduced padding to bring logo closer to the edge */
+}
+
+.site-logo {
+    height: 60px; /* Adjust the height of the logo as needed */
+    width: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure the logo doesn't overflow */
+}
+
+/* Box on the right */
+.hero-right-box {
+    flex: 0 0 auto; /* Prevent the box from growing or shrinking */
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+    width: 240px; /* Fixed width */
+    height: 50px; /* Smaller height */
+    gap: 10px; /* Space between buttons */
+    justify-content: flex-end; /* Align buttons to the right */
+    background: #1e2933; /* Background color */
+    border-radius: 5px; /* Rounded edges */
+    overflow: hidden; /* Ensure rounded edges are visible */
+    border: 1px solid #070a0c; /* Border around the box */
+
+
+}
+
+/* Menu links */
+.menu-link {
+    flex: 1; /* Distribute space evenly among links */
+    display: flex;
+    align-items: center; /* Vertically center the text */
+    justify-content: center; /* Horizontally center the text */
+    padding: 0 10px; /* Add padding for better spacing */
+    text-align: center; /* Center the text */
+    color: #bbb; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-right: 1px solid #070a0c; /* Divider between links */
+    transition: background 0.3s, color 0.3s; /* Smooth transition for hover and tap */
+    font-size: 0.9rem; /* Adjust font size for better fit */
+}
+
+/* Remove border from the last link */
+.menu-link:last-child {
+    border-right: none;
+}
+
+/* Hover and tap effects */
+.menu-link:hover,
+.menu-link:active {
+    background: #070a0c; /* Tap highlight color */
+    color: #fff; /* Change text color on hover/tap */
+}
+
+
+/* Hero content below */
+.hero-content {
+    width: 100%;
+    margin: 20px 0; /* Add margin for spacing */
+}
+
+/* Content box */
+.content-box {
+    display: flex;
+    width: 95%; /* 10% margin on both sides */
+    margin: 0 auto; /* Center the box */
+    background: #1c3b56; /* Default background for the box */
+    border-radius: 10px; /* Rounded edges */
+    overflow: hidden; /* Ensure rounded edges are visible */
+    border-radius: 0;
+}
+
+/* Left Section */
+.left-section {
+    flex: 60%; /* Take up 60% of the space */
+    background: #1e2933; /* Left section color */
+    padding: 20px; /* Add padding for spacing */
+    position: relative; /* For gradient effect */
+    font-family: Consolas, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, sans-serif; /* Font family */
+}
+
+/* Gradient effect for left section- left, top, bottom */
+.left-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0) 40%,
+        rgba(0, 0, 0, 0) 95%,
+        rgba(0, 0, 0, 0.1) 100%
+    ), linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0) 40%,
+        rgba(0, 0, 0, 0) 95%,
+        rgba(0, 0, 0, 0.1) 100%
+    ), linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0) 40%,
+        rgba(0, 0, 0, 0) 95%,
+        rgba(0, 0, 0, 0.1) 100%
+    );
+    pointer-events: none; /* Ensure the gradient doesn't block clicks */
+}
+
+
+/* Heading in the left section */
+.left-section h4 {
+    color: #fff; /* White text for better contrast */
+    margin: 0; /* Remove default margin */
+}
+
+.measurements-field ul {
+    display: flex; /* Make the <ul> a flex container */
+    flex-wrap: wrap; /* Allow wrapping of <li> items */
+    gap: 10px; /* Add spacing between columns */
+}
+
+/* List item styles */
+.measurements-field li {
+    flex: 1 1 calc(50% - 10px); /* Each <li> takes 50% of the width minus the gap */
+    display: flex;
+    flex-direction: column; /* Stack label and input vertically */
+    gap: 5px; /* Spacing between label and input */
+    margin-bottom: 15px; /* Spacing between rows */
+}
+
+.measurements-field label {
+    flex: 0 0 auto; /* Prevent the label from growing or shrinking */
+    margin-bottom: 0;
+    color: #11a611; /* Ensure labels are visible */   
+}
+
+/* Input fields in .measurements-field */
+.measurements-field input {
+    width: 60%; /* Full width within the <li> */
+    padding: 8px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background: #333;
+    color: #fff;
+    font-family: inherit;
+}
+
+.properties-field label {
+    display: block; /* Ensure labels are on their own line */
+    margin-bottom: 5px; /* Add spacing between label and input */
+    color: #ffffff; /* Ensure labels are visible */
+    text-align: left; /* Left-align labels */
+}
+
+/* Remove list styles */
+.left-section ul {
+    list-style: none; /* Remove bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.properties-field li {
+    margin-bottom: 15px; /* Add spacing between list items */
+}
+
+/* Input and select styles */
+.properties-field input,
+.properties-field select {
+    width: 100%; /* Make inputs and selects full width */
+    padding: 8px; /* Add padding for better spacing */
+    border: 1px solid #444; /* Add a subtle border */
+    border-radius: 4px; /* Slightly rounded corners */
+    background: #333; /* Dark background for inputs and selects */
+    color: #fff; /* White text color */
+    font-family: inherit; /* Inherit font family */
+    max-width: 80%;
+}
+
+/* Input and select focus styles */
+.left-section input:focus,
+.left-section select:focus {
+    border-color: #ff6600; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+}
+
+
+
+
+
+/* Calculate cost section */
+.calculateCost {
+    display: flex;
+    gap: 10px; /* Space between button and input */
+    align-items: center; /* Vertically center items */
+    margin-top: 20px;
+}
+
+.startButton {
+    flex: 0 0 auto; /* Prevent the button from growing or shrinking */
+    background: #ff6600;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#cost {
+    flex: 1; /* Allow input to take remaining space */
+    padding: 8px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Cart Styles */
+.cart-container {
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cart-header {
+  display: grid;
+  grid-template-columns: 110px 2fr 1fr 1fr 1fr;
+  padding: 15px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 110px 2fr 1fr 1fr 1fr;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  min-height: 110px;
+}
+
+.preview img {
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.description h4 {
+  margin: 0 0 8px 0;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.description p {
+  margin: 0 0 2px 0;
+  color: #666;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  cursor: pointer;
+  padding: 2px 2px;
+  font-size: 0.9em;
+}
+
+.remove-btn:hover {
+  text-decoration: underline;
+}
+
+.price, .total {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qty-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qty-btn:hover {
+  background: #f8f9fa;
+}
+
+.qty-value {
+  min-width: 30px;
+  text-align: center;
+}
+
+.cart-footer {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  background: #f8f9fa;
+  font-size: 1.1em;
+}
+
+.grand-total {
+  font-size: 1.2em;
+  color: #27ae60;
+}
+
+.total-items {
+  color: #7f8c8d;
+}
+
+.cart-actions {
+  padding: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  background: #f8f9fa;
+  border-top: 1px solid #ddd;
+}
+
+.clear-cart-btn, .export-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.clear-cart-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+.clear-cart-btn:hover {
+  background: #c0392b;
+}
+
+.export-btn {
+  background: #27ae60;
+  color: white;
+}
+
+.export-btn:hover {
+  background: #229954;
+}
+
+.empty-cart {
+  padding: 40px;
+  text-align: center;
+  color: #7f8c8d;
+}
+
+
+/* Right Section */
+.right-section {
+    flex: 40%; /* Take up half the space */
+    background: #1c3b56; /* Right section color */
+    padding: 20px; /* Add padding for spacing */
+    text-align: right; /* Align text to the right */
+}
+
+
+/* Paragraph and button in the right section */
+.right-section p {
+    color: #bbb; /* Light gray text */
+    margin: 0 0 10px 0; /* Add spacing below the paragraph */
+}
+
+.right-section .cta-button {
+    background: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.right-section img {
+    max-width: 100%; /* Ensure the image does not exceed the width of its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Default widget styles for all screen sizes */
+
+/*.widgets-section {
+    background-color: #fcfcfc;
+}*/
+.list-widgets {
+    width: 98%; /* 100% - (7% + 7%) */
+    margin-left: 1%; /* Explicit left margin */
+    margin-right: 1%; /* Explicit right margin */
+    margin-top: 20px;
+    padding: 20px 0;
+}
+
+/* Gallery and User Guide Widgets */
+
+.gallery-widget {
+    border-top: 4px solid #75a8d3;
+    padding: 5%;
+}
+.aux-gallery-widget {
+    border-top: 1px solid #caccce;;
+    padding: 5%;
+}
+
+.gallery-widget-header-container {
+    padding: 5px; /* Adds padding inside the container */
+    display: flex;
+    justify-content: space-between; /* Puts space between the <h1> and <p> */
+    align-items: center; /* Vertically centers the items */
+    width: 100%; /* Ensures the container takes full width */
+}
+
+.gallery-widget-header-container p {
+    margin-right: 10%;
+}
+
+.gallery-widget-header-container a {
+    text-decoration: none;
+    color: #999999;
+    font-family: Flux-Regular, SourceSansProRegular, Arial, sans-serif;
+}
+
+.list-widgets h1.widget-title {
+    color: #444444; /* Dark gray color */
+    font-size: 1.2rem; /* Font size */
+    margin-bottom: 10px; /* Space below the heading */
+    font-family: Flux-Regular, SourceSansProRegular, Arial, sans-serif;
+}
+
+/* Styles for .userGuide-widget */
+.userGuide-widget {
+    border-top: 4px solid #75a8d3;
+    padding: 5%;
+}
+
+.userGuide-widget .user-guide-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.userGuide-widget .user-guide-items li {
+    border-top: 1px solid #caccce;
+    padding: 5px 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+
+/*.userGuide-widget .user-guide-items li:first-child {
+    border-top: none;
+}*/
+
+.userGuide-widget .steps {
+    flex: 0 0 80px;
+    font-weight: normal;
+    color: #444444;
+}
+
+.userGuide-widget .user-guide-items li h2 {
+    flex: 1;
+    margin: 0;
+    font-family: SourceSansProRegular, Arial, sans-serif;
+    font-size: 0.9rem;
+    font-weight: normal;
+    line-height: 1.4;
+    color: #000000;
+/*    color: #3776ab;*/
+}
+
+.userGuide-widget .user-guide-items li h2 a {
+    color: #3776ab;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.userGuide-widget .user-guide-items li h2 a:hover {
+    text-decoration: none;
+    color: #1e2933; /* Dark blue color */
+
+}
+
+/* Active state (when the link is being clicked) */
+.user-guide-items a:active {
+    color: white; /* Text color when active */
+    text-decoration: underline; /* Remove underline during active state */
+}
+
+.blogs-widget {
+    width: 98%; /* 100% - (7% + 7%) */
+    margin-left: 1%; /* Explicit left margin */
+    margin-right: 1%; /* Explicit right margin */
+    margin-top: 20px;
+    padding: 20px 0;
+}
+
+/* Gallery and User Guide Widgets */
+
+.blog1-widget {
+    border-top: 4px solid #75a8d3;
+    padding: 5%;
+}
+
+.blog1-widget-header-container {
+    padding: 5px; /* Adds padding inside the container */
+    display: flex;
+    justify-content: space-between; /* Puts space between the <h1> and <p> */
+    align-items: center; /* Vertically centers the items */
+    width: 100%; /* Ensures the container takes full width */
+}
+
+.blog1-widget-header-container p {
+    margin-right: 10%;
+}
+
+.blog1-widget-header-container a {
+    text-decoration: none;
+    color: #999999;
+    font-family: Flux-Regular, SourceSansProRegular, Arial, sans-serif;
+}
+
+.blogs-widget h1.widget-title {
+    color: #444444; /* Dark gray color */
+    font-size: 1.2rem; /* Font size */
+    margin-bottom: 10px; /* Space below the heading */
+    font-family: Flux-Regular, SourceSansProRegular, Arial, sans-serif;
+}
+
+/* Styles for .userGuide-widget */
+.blog2-widget {
+    border-top: 4px solid #75a8d3;
+    padding: 5%;
+}
+
+/*.blog1 ol {
+    list-style: none;
+}
+
+.blog1 h3 {
+    padding-bottom: 0px;
+    margin-bottom: 1px;
+}*/
+
+.blog1 ol {
+    padding: 2px;
+}
+.blog1 .aluminium-benefits li {
+    position: relative; /* Required for pseudo-elements */
+    padding: 20px; /* Add padding for spacing inside the box */
+    margin-bottom: 20px; /* Add margin to separate the boxes */
+    list-style: none; /* Remove default list styling */
+}
+
+/* Top-left corner */
+.blog1 .aluminium-benefits li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 48%; /* Horizontal line width */
+    height: 1px; /* Line thickness */
+    background-color: #caccce; /* Line color */
+}
+
+.blog1 .aluminium-benefits li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px; /* Line thickness */
+    height: 48%; /* Vertical line height */
+    background-color: #caccce; /* Line color */
+}
+
+/* Top-right corner */
+.blog1 .aluminium-benefits li .top-right::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48%; /* Horizontal line width */
+    height: 1px; /* Line thickness */
+    background-color: #caccce; /* Line color */
+}
+
+.blog1 .aluminium-benefits li .top-right::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px; /* Line thickness */
+    height: 48%; /* Vertical line height */
+    background-color: #caccce; /* Line color */
+}
+
+/* Bottom-left corner */
+.blog1 .aluminium-benefits li .bottom-left::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 48%; /* Horizontal line width */
+    height: 1px; /* Line thickness */
+    background-color: #caccce; /* Line color */
+}
+
+.blog1 .aluminium-benefits li .bottom-left::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1px; /* Line thickness */
+    height: 48%; /* Vertical line height */
+    background-color: #caccce; /* Line color */
+}
+
+/* Bottom-right corner */
+.blog1 .aluminium-benefits li .bottom-right::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 48%; /* Horizontal line width */
+    height: 1px; /* Line thickness */
+    background-color: #caccce; /* Line color */
+}
+
+.blog1 .aluminium-benefits li .bottom-right::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 1px; /* Line thickness */
+    height: 48%; /* Vertical line height */
+    background-color: #caccce; /* Line color */
+}
+
+.parts-of-a-window img{
+    max-width: 450px;
+}
+
+.parts-of-a-window:nth-child(2) {
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center;     /* Vertical centering */
+}
+
+.parts-of-a-window:nth-child(2) img {
+    width: 200px;
+    height: 150px;
+}
+
+.tag-wrapper {
+    padding-left: 5%;
+}
+
+.tag-wrapper .tag {
+    white-space: nowrap;
+    color: #000000;
+    font-size: 0.875em;
+    vertical-align: baseline;
+    padding: 0.2em 0.4em 0.1em;
+    background-color: #e6e8ea;
+    border-top: 1px solid #f2f4f6;
+    border-bottom: 1px solid #caccce;
+}
+
+
+
+.tag-wrapper a:link {
+    -webkit-tap-highlight-color: #1e2933;
+}
+.tag-wrapper a, a:active, a:visited, a:hover, a:visited:hover {
+    color: #3776ab;
+    text-decoration: none;
+}
+
+.tag-wrapper .tag:hover {
+    background-color: #d0d2d4; /* Change background color on hover */
+}
+
+
+
+.widgets-2 {
+    width: 94%; /* Adjusted to account for 2% margins on either side */
+    margin: 3% auto; /* Centrally located with automatic left and right margins */
+    margin-top: 0;
+    display: flex; /* Use flexbox for better alignment and spacing */
+    justify-content: space-between; /* Distribute space between widgets */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+}
+
+.small-widget {
+    width: 23%; /* Uniform width for each widget */
+    margin-right: 1%; /* Margin between widgets */
+    border-top: 4px solid #75a8d3;
+    padding: 2%;
+    border-bottom: 1px solid #caccce;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.small-widget.last {
+    margin-right: 0; /* Remove margin for the last widget */
+}
+
+.widgets-2 h1.widget-title {
+    font-family: 'Helvetica', 'Arial', sans-serif; /* Sans-serif font for h1 */
+    font-size: 1.2rem; /* Adjust size as needed */
+    margin: 0 0 10px 0; /* Adjust margin as needed */
+}
+
+.small-widget p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.9rem;
+    font-weight: normal;
+    line-height: 1.4;
+    color: #000000;
+    margin: 0 0 10px 0; /* Adjust margin as needed */
+}
+
+.small-widget ul {
+    padding-left: 0;
+}
+
+.small-widget li {
+    list-style: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.9rem;
+    color: inherit;
+    text-decoration: none;
+    font-weight: normal;
+    line-height: 1;
+    color: #000000;
+    margin: 0 0 10px 0; /* Adjust margin as needed */
+}
+
+.blog-img img{
+    width: 200px;
+    height: 150px;
+}
+
+#soundproofing-glass {
+    display: flex;
+    gap: 90px;
+    margin: 0 auto; /* Center container */
+
+}
+#soundproofing-glass img{
+    height: 150px;
+    width: 100%; /* Fill available space */
+    object-fit: contain; 
+    flex: 1; /* Distribute space equally */
+}
+
+
+/* Footer Styles */
+.main-footer {
+    background: #1e2933; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 30px 0; /* Padding for top and bottom */
+    border-top: 1px solid #444; /* Add a subtle border at the top */
+}
+
+.main-footer .container {
+    display: flex;
+    justify-content: space-between; /* Space between copyright and social icons */
+    align-items: center; /* Vertically center content */
+    max-width: 1200px; /* Match the container width */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Add padding to prevent content from touching edges */
+}
+
+.copyright-section p {
+    margin: 0; /* Remove default margin */
+    font-size: 0.9rem; /* Adjust font size */
+    color: #bbb; /* Light gray text color */
+}
+
+.social-media-links {
+    display: flex;
+    gap: 15px; /* Space between social media icons */
+}
+
+.social-media-links a {
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-media-links a:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    opacity: 0.8; /* Slight fade on hover */
+}
+
+.social-media-links img {
+    width: 27px; /* Icon size */
+    height: 27px; /* Icon size */
+
+}
+
+
+/* Pairing elements on larger screens */
+@media (min-width: 550px) {
+    .hamburger-menu {
+        display: none;
+    }
+    
+    .properties-field ul {
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping */
+        gap: 20px; /* Add space between pairs */
+    }
+
+    .properties-field li {
+        flex: 1 1 calc(50% - 10px); /* Two items per row with spacing */
+        margin-bottom: 0; /* Remove margin between pairs */
+    }
+
+    /* Ensure the last item takes full width if it's alone */
+    .properties-field li:last-child:nth-child(odd) {
+        flex: 1 1 100%;
+    }
+}
+
+/* Adjust layout for medium screens (552px - 850px) */
+@media (min-width: 552px) and (max-width: 850px) {
+    .content-box {
+        flex-direction: row; /* Ensure the sections are side by side */
+    }
+
+    .left-section {
+        flex: 60%; /* Left section takes 60% of the width */
+    }
+
+    .right-section {
+        flex: 40%; /* Right section takes 40% of the width */
+        display: flex;
+        flex-direction: column; /* Stack children vertically */
+        align-items: center; /* Center the image horizontally */
+        justify-content: flex-start; /* Align content to the top */
+        padding-top: 20px; /* Add some top padding */
+    }
+
+    /* Ensure the image fits within the right section */
+    .right-section img {
+        max-width: 100%; /* Ensure the image does not exceed the width of its container */
+        height: auto; /* Maintain aspect ratio */
+        margin-top: 20px; /* Add some top margin to position the image towards the top */
+    }
+
+    #soundproofing-glass {
+        max-width: 100%; /* Allow container to shrink */
+        gap: 90px; /* Slightly reduce gap */
+    }
+    #soundproofing-glass img {
+        height: 130px; /* Adjust image size */
+    }
+}
+
+/* Media query for large screens (min-width: 768px) */
+@media (min-width: 768px) {
+    .list-widgets {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .gallery-widget {
+        flex: 1; /* Take up available space */
+        margin-right: 10px; /* Add spacing between .gallery-widget and .userGuide-widget */
+    }
+    .aux-gallery-widget {
+        flex: 1; /* Take up available space */
+        margin-right: 10px; /* Add spacing between .gallery-widget and .userGuide-widget */
+    }
+
+    .userGuide-widget {
+        flex: 1; /* Take up available space */
+        margin-left: 10px; /* Add spacing between .gallery-widget and .userGuide-widget */
+    }
+
+    .blogs-widget {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .blog1-widget {
+        flex: 1; /* Take up available space */
+        margin-right: 10px; /* Add spacing between .gallery-widget and .userGuide-widget */
+    }
+
+    .blog2-widget {
+        flex: 1; /* Take up available space */
+        margin-left: 10px; /* Add spacing between .gallery-widget and .userGuide-widget */
+    }
+
+}
+
+
+/* Mobile-specific styles */
+@media (max-width: 551px) {
+
+    .hero-right-box {
+        display: none;
+    }
+
+    .content-box {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+    }
+
+    .left-section {
+        text-align: left; /* Center text on smaller screens */
+        width: 100%; /* Full width for left section */
+
+    }
+
+    .right-section {
+        width: 90%;
+        max-width: 400px;
+        background: #1c3b56;
+        padding: 10px;
+        text-align: center;
+        z-index: 1000;
+        height: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        margin: 0 auto; /* Center the section horizontally in default state */
+    }
+
+    /* Pinned state */
+    .right-section.pinned {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .previewArea {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .previewArea img {
+        max-width: 100%; /* Limit image width */
+        max-height: 100%; /* Limit image height */
+        height: auto; /* Maintain aspect ratio */
+        width: auto; /* Maintain aspect ratio */
+    }
+
+    .right-section {
+        transition: all 0.3s ease; /* Smooth transition for position changes */
+    }
+
+    /* Ensure the image fits within the right section */
+    .right-section img {
+        max-width: 70%; /* Ensure the image does not exceed the width of its container */
+        height: auto; /* Maintain aspect ratio */
+        margin-top: 20px; /* Add some top margin to position the image towards the top */
+    }
+
+/*    Hamburger menu*/
+    .main-navigation {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .main-navigation .menu {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust this if needed to align with your header */
+        right: 0;
+        background: #1e2933;
+        width: 100%;
+        max-height: 25vh; /* Set the maximum height to 25% of the viewport height */
+        overflow-y: auto; /* Add scroll if content exceeds the height */
+        z-index: 1000;
+        padding: 10px 0; /* Add some padding for better spacing */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
+    }
+
+    .main-navigation .menu.open {
+        display: flex;
+    }
+
+    .main-navigation .menu li {
+        margin: 2px 0 !important; /* Override the conflicting style */
+        padding: 0; /* Remove any default padding */
+        line-height: 1.2; /* Adjust line height to reduce vertical spacing */
+    }
+
+    .main-navigation .menu li a {
+        padding: 8px 20px; /* Adjust padding for better spacing */
+        font-size: 0.7rem; /* Reduce font size slightly */
+        color: #fff; /* Ensure text is visible */
+        text-decoration: none; /* Remove underline */
+        display: block; /* Make the entire area clickable */
+    }
+
+    .hamburger-menu {
+        font-size: 24px;
+        color: #fff;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+
+
+    .main-navigation .menu li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: block;
+    }
+
+    #soundproofing-glass {
+        flex-wrap: nowrap; /* Ensure items stay in row */
+        gap: 10px; /* Reduce gap further */
+        max-width: 100%;
+    }
+    #soundproofing-glass img {
+        height: 110px; /* Smaller height for mobile */
+        min-width: 45%; /* Prevent excessive narrowing */
+    }
+
+    .widgets-2 {
+        flex-direction: column; /* Stack widgets vertically */
+    }
+
+    .small-widget {
+        width: 100%; /* Full width for each widget */
+        margin-right: 0; /* Remove margin between widgets */
+        margin-bottom: 20px; /* Add space between stacked widgets */
+        border-bottom: none;
+    }
+
+    .small-widget.last {
+        margin-bottom: 0; /* Remove bottom margin for the last widget */
+    }
+
+    .social-media-links {
+        gap: 10px; /* Reduce gap on smaller screens */
+    }
+
+    .social-media-links img {
+        width: 30px; /* Smaller icons on mobile */
+        height: 30px;
+    }
+
+    .main-footer .container {
+        flex-direction: column; /* Stack copyright and social icons vertically on small screens */
+        gap: 10px; /* Add space between stacked elements */
+    }
+
+    .social-media-links {
+        gap: 10px; /* Reduce gap between icons on smaller screens */
+    }
+
+    .social-media-links img {
+        width: 30px; /* Smaller icons on mobile */
+        height: 30px;
+    }
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+    background: #f9f9f9; /* Updated color */
+    padding: 20px 0; /* Added padding for better spacing */
+}
+
+.feature {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.feature h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Footer Styles */
+/*.main-footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social-links li {
+    margin: 0 10px;
+}
+
+.social-links img {
+    height: 24px;
+}*/
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 550px) {
+    .main-navigation ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-top-row {
+        justify-content: center; /* Center logo and buttons on smaller screens */
+    }
+
+    .hero-right-box {
+        justify-content: center; /* Center buttons on smaller screens */
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Reduce heading size on smaller screens */
+    }
+
+    .hero p {
+        font-size: 0.9rem; /* Reduce paragraph size on smaller screens */
+    }
+
+        .features {
+        flex-direction: column;
+    }
+
+    .feature {
+        margin: 20px 0;
+    }
+
+    /* Adjust font size for mobile devices */
+    .right-section p {
+        font-size: 1rem;
+    }
+
+    /* Ensure inputs don't exceed container width on small screens */
+    .measurements-field input,
+    .properties-field input,
+    .properties-field select {
+        max-width: 80%;
+    }
+}
+
+    
+
+

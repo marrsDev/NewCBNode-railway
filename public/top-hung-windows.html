@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluminium Windows Cost Calculator | Cost of aluminium top hung windows in Kenya | Types of windows by operation </title>
+    <link rel="stylesheet" href="css/styles-2.css">
+    <link rel="stylesheet" href="css/gallery-css.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <meta name="description" content="Calculate the cost of custom aluminium windows and glass prices in Kenya with our user-friendly tool. Get instant quotes for high quality aluminium casement windows tailored to your needs.">
+
+
+
+</head>
+
+<body>
+
+    <div id="touchnav-wrapper">
+
+
+
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-navigation">
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
+            <!-- Menu Items -->
+            <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aluminium-sliding-windows.html">Sliding Windows</a></li>
+                    <li><a href="top-hung-windows.html">Top Hung Windows</a></li>
+                    <li><a href="aluminium-doors.html">Aluminium Doors</a></li>
+                    <li><a href="curtain-walling-facades.html">Curtain Walling Facades</a></li>
+                    <li><a href="office-partitions.html">Office Partitions</a></li>
+                    <li><a href="glass-types.html">Glass Types</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<section class="hero">
+    <div class="container">
+        <!-- Top row: Logo and Box -->
+        <div class="hero-top-row">
+            <!-- Logo on the left -->
+            <div class="site-headline">
+                <a href="/"><img class="site-logo" src="img/Capital builders logo.png" alt="Capital Builders Logo"></a>
+            </div>
+
+            <!-- Box on the right -->
+            <div class="hero-right-box">
+                <a href="/page1" class="menu-link">Page 1</a>
+                <a href="/page2" class="menu-link">Page 2</a>
+                <a href="/page3" class="menu-link">Page 3</a>
+            </div>
+        </div>
+
+<!-- Hero content below -->
+<div class="hero-content">
+    <div class="content-box">
+        
+<!-- Left Section -->
+<div class="left-section">
+    <div class="measurements-field">
+        <h4>>> Enter your window's measurements</h4>
+        <ul>
+            <li>
+                <label>Height (mm):*</label>
+                <input type="text" id="heightId">
+            </li>
+            <li>
+                <label>Width (mm):*</label>
+                <input type="text" id="widthId">
+            </li>
+        </ul>
+    </div>
+    <div class="properties-field">
+        <h4>>>> Configure properties</h4>
+        <ul>
+            <li class="profileColour">
+                <label>Profile colour:</label>
+                <select id="profileColour">
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                    <option value="silver">Silver</option>
+                    <option value="brown">Brown</option>
+                    <option value="champagne">Champagne</option>
+                    <option value="grey">Grey</option>
+                </select>
+            </li>
+                <li><label>Select Window Type:</label>
+                    <select id="topHungWindowType" onchange="typeGallery()">
+                    <option value="doublePanel">Double panels</option>
+                    <option value="singlePanel">Single Top-Hung panel</option>
+                    <option value="customLight">Custom Light Window</option>
+                    <option value="centerHung">Center-Hung Window</option>
+                    <option value="fixedLight">fixed-Light Window-Small vent</option>
+                    <option value="fixedLight2">fixed-Light Window</option>
+                    </select>
+                </li>
+            <li class="glassType">
+                <label>Select Glass Type:</label>
+                <select id="glassType">
+                    <option value="clear">clear</option>
+                    <option value="oneWay">oneWay</option>
+                    <option value="tinted">tinted</option>
+                    <option value="obscured">obscured</option>
+                    <option value="nashiji">Nashiji</option>
+                </select>
+            </li>
+            <li class="glassThickness">
+                <label>Glass thickness:</label>
+                <select id="glassThickness">
+                    <option value="4mm">4mm</option>
+                    <option value="5mm">5mm</option>
+                    <option value="6mm">6mm</option>
+                    <option value="8mm">8mm</option>
+                    <option value="3+3mmLam">3+3mm Laminated</option>
+                    <option value="4+4mmLam">4+4mm Laminated</option>
+                    <option value="5+5mmLam">5+5mm Laminated</option>
+                    <option value="6mmTuff">6mm Toughened</option>
+                    <option value="8mmTuff">8mm Toughened</option>
+                    <option value="10mmTuff">10mm Toughened</option>
+                </select>
+            </li>
+            <li>
+            <div class="calculateCost">
+                <button class="startButton" onclick="start()">Calculate Cost</button>
+                <input type="text" id="cost" readonly> <!-- Add `readonly` if the input is not editable -->
+            </div>                
+            </li>
+            <li>
+                <button id="add-to-cart">Add to Cart</button>
+                <button id="export-quote">Export Quote</button>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+    <!-- Right Section -->
+    <div class="right-section">
+        <div class="previewArea">
+            <img src="img/type-13.png" id="img-type" width="300px" height="300px">
+            
+        </div>
+    </div>
+    </div>
+</div>
+
+    </div>
+</section>
+
+<section class="cart-preview">
+                    <div id="cart-preview"></div>
+</section>
+        
+        <section class="widgets-section">
+                <div class="list-widgets">
+
+                    <div class="gallery-widget">
+
+                        <div class="gallery-widget-header-container"> 
+                            <h1 class="widget-title"><span aria-hidden="true" class="icon-news"></span>Projects</h1>
+                            <p class="give-me-more"><a href="#our-projects" title="More-photos">>>>More</a></p>
+                        </div>
+                            
+<div class="gallery">
+    <!-- Row 1 -->
+    <div class="row">
+        <div class="folder">
+            <img src="img/aux-img/project1/project1_cover.jpeg" alt="Project 1" class="cover-photo">
+        </div>
+        <div class="folder">
+            <img src="img/aux-img/project2/project2_cover.jpg" alt="Project 2" class="cover-photo">
+        </div>
+        <div class="folder">
+            <img src="img/aux-img/project3/project3_cover.jpg" alt="Project 3" class="cover-photo">
+        </div>
+    </div>
+
+        <!-- Row 2 -->
+    <div class="row">
+        <div class="folder">
+            <img src="img/aux-img/project4/project4_cover.jpg" alt="Project 1" class="cover-photo">
+        </div>
+        <div class="folder">
+            <img src="img/aux-img/project5/project5_cover.jpg" alt="Project 2" class="cover-photo">
+        </div>
+        <div class="folder">
+            <img src="img/aux-img/project6/project6_cover.jpg" alt="Project 3" class="cover-photo">
+        </div>
+    </div>
+
+        <!-- Row 3 -->
+
+</div>
+
+<!-- Folder content for Project 1 -->
+<div class="folder-overlay" id="folder1">
+    <div class="folder-content">
+            <button class="back-button">Back</button>
+        <img src="img/aux-img/project1/project1_1.jpg" alt="Project 1 Image 1">
+        <img src="img/aux-img/project1/project1_2.jpg" alt="Project 1 Image 2">
+        <img src="img/aux-img/project1/project1_3.jpg" alt="Project 1 Image 3">
+        <div class="nav-arrows">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Folder content for Project 2 -->
+<div class="folder-overlay" id="folder2">
+    <div class="folder-content">
+            <button class="back-button">Back</button>
+        <img src="img/aux-img/project2/project2_1.jpg" alt="Project 2 Image 1">
+        <img src="img/aux-img/project2/project2_2.jpg" alt="Project 2 Image 2">
+        <img src="img/aux-img/project2/project2_3.jpg" alt="Project 2 Image 3">
+        <div class="nav-arrows">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+
+        </div>
+    </div>
+</div>
+
+<!-- Folder content for Project 3 -->
+<div class="folder-overlay" id="folder3">
+    <div class="folder-content">
+            <button class="back-button">Back</button>
+        <img src="img/aux-img/project3/project3_1.jpg" alt="Project 3 Image 1">
+        <img src="img/aux-img/project3/project3_2.jpg" alt="Project 3 Image 2">
+        <img src="img/aux-img/project3/project3_3.jpg" alt="Project 3 Image 3">
+        <div class="nav-arrows">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Folder content for Project 4 -->
+<div class="folder-overlay" id="folder3">
+    <div class="folder-content">
+            <button class="back-button">Back</button>
+        <img src="img/aux-img/project4/project4_1.jpg" alt="Project 4 Image 1">
+        <img src="img/aux-img/project4/project4_2.jpg" alt="Project 4 Image 2">
+        <img src="img/aux-img/project4/project4_3.jpg" alt="Project 4 Image 3">
+        <div class="nav-arrows">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Folder content for Project 5 -->
+<div class="folder-overlay" id="folder3">
+    <div class="folder-content">
+            <button class="back-button">Back</button>
+        <img src="img/aux-img/project5/project5_1.jpg" alt="Project 5 Image 1">
+        <img src="img/aux-img/project5/project5_2.jpg" alt="Project 5 Image 2">
+        <img src="img/aux-img/project5/project5_3.jpg" alt="Project 5 Image 3">
+        <div class="nav-arrows">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Folder content for Project 6 -->
+<div class="folder-overlay" id="folder3">
+    <div class="folder-content">
+            <button class="back-button">Back</button>
+        <img src="img/aux-img/project6/project6_1.jpg" alt="Project 6 Image 1">
+        <img src="img/aux-img/project6/project6_2.jpg" alt="Project 6 Image 2">
+        <img src="img/aux-img/project6/project6_3.jpg" alt="Project 6 Image 3">
+        <img src="img/aux-img/project6/project6_4.jpg" alt="Project 6 Image 4">
+        <img src="img/aux-img/project6/project6_5.jpg" alt="Project 6 Image 5">
+        <div class="nav-arrows">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+            
+        </div>
+    </div>
+</div>
+
+                    </div>
+
+                    <div class="userGuide-widget">
+                        
+                        
+                            <h1 class="widget-title"><span aria-hidden="true" class="icon-calendar"></span>Follow the following steps to getcurrent Aluminium window prices in Kenya</h1>
+                            
+                            <ul class="user-guide-items">
+                                
+                                
+                                
+                                <li>
+<span class="steps">Step 1</span> <h2>Enter the <a href="#widthId">width</a> and <a href="#heightId">height</a> of your aluminum window in millimeters</h2>
+</li>
+                                
+                                
+                                
+                                <li>
+<span class="steps">Step 2</span> <h2>Select your preferred aluminium <a href="#profileColour">colour</a></h2>
+</li>
+                                
+                                
+                                
+                                <li>
+<span class="steps">Step 3</span> <h2>Specify the number of panels for your sliding window <a href="#noOfPanels">here</a></h2>
+</li>
+                                
+                                
+                                
+                                <li>
+<span class="steps">Step 4</span> <h2>Choose whether the window should have a fixed aluminium <a href="#fixedPartition">partition</a></h2>
+</li>
+                                
+                                
+                                
+                                <li>
+<span class="steps">Step 5</span> <h2>Configure glass types: Thickness and type <a href="#glassType">in this drop-down box</a></h2>
+</li>
+
+
+                                <li>
+<span class="steps">Step 6</span> <h2>Press <a href="#"> 'Calculate cost'</a>. The cost of your custom aluminium sliding window in Nairobi will be populated in the cost box </h2>
+</li>
+                                
+                                
+                            </ul>
+
+                    </div>
+
+                </div>
+
+
+                <div class="blogs-widget">
+
+                    <div class="blog1-widget">
+
+                        <div class="blog1-widget-header-container"> 
+                            <h1 class="widget-title"><span aria-hidden="true" class="icon-news"></span>Types of windows by operation</h1>
+                        </div>
+                            
+<div class="blog1">
+    <ol class="types-of-windows">
+        <li>
+            <h2>Top Hung or Awning windows</h2>
+            <p>Top hung windows are hinged at the top and open outward from the bottom, making them ideal for areas where space is limited. They are perfect for bathrooms, kitchens, or high-rise buildings, as their design prevents rainwater from entering while allowing fresh air to flow in.</p>
+        </li>
+        <li>
+            <h2>Double Hung</h2>
+            <p>They feature two movable sashes that slide vertically within the frame, allowing for flexible ventilation options. They open from the top or bottom, are easy to clean and provide great ventilation options. Double-hung windows however require regular maintenance</p>
+        </li>
+        <li>
+            <h2>Sliding</h2>
+            <p><a href="aluminium-sliding-windows.html">Sliding windows</a> are a popular choice for modern homes and offices in Kenya due to their space-saving design and ease of operation</p>
+        </li>
+        <li>
+            <h2>Casement or Side Hung</h2>
+            <p>Casement windows either swing left or right using a crank, similar to a door. They are perfect for capturing breezes and maximizing airflow, making them ideal for living rooms, bedrooms, and other frequently used spaces.</p>
+        </li>
+        <li>
+            <h2>Fixed Windows</h2>
+            <p>Although permanently fixed windows do not provide airflow, they provide great weather resistance and create unobstructed views of your landscape. Fixed windows are ideal for areas where ventilation is not a priority, such as hallways, staircases, or decorative features. They typically have no moving parts and are thus less expensive compared to other window options</p>
+        </li>
+        
+    </ol>
+</div>
+
+
+
+                    </div>
+                    <div class="blog2-widget">
+                        
+                        <div class="blog1-widget-header-container"> 
+                            <h1 class="widget-title"><span aria-hidden="true" class="icon-news"></span>Types of windows by location</h1>
+                        </div>
+                        <div class="blog-2">
+                            <ul>
+                                <li>
+                                    <h3>Corner windows: Maximizing Light and Views</h3>
+                                    <p>Corner windows are a striking architectural feature where two window units meet at a 90-degree angle, creating a seamless glass corner that floods interiors with natural light and offers panoramic views. Aluminium window frames are a popular choice for corner windows due to their strength and slim profiles, which maximize glass area.</p>
+                                </li>
+                                <li>
+                                    <h3>Bay windows</h3>
+                                    <p>Bay windows are typically composed of three panels — a large central window flanked by two smaller side windows that project outward from a home's facade. They're popular in living rooms and dining areas as they're known to flood rooms with plenty of natural light while offering expansive views. They can be triangular, rectangular, or polygonal in shape.</p>
+                                </li>
+                                <li>
+                                    <h3>Gable windows</h3>
+                                    <p>These type of windows are named gable because they're typically located at the gable end of a sloped roof. They enhance a home's architectural character by complementing your roofline's outlook while providing excellent ventilation and functional lighting. Gable windows are typically found in traditional designs, cottages, or modern homes</p>
+                                </li>
+                                <li>
+                                    <h3>Dormer windows: Style and Function for Sloped Roofs</h3>
+                                    <p>Dormer windows are vertical windows that project from a sloping roof, adding headroom, natural light, and ventilation to attic or loft spaces. These architectural features combine practicality with visual appeal, breaking up large roof planes while creating charming exterior details. They're particularly valuable for transforming dark attic spaces into functional living areas while enhancing curb appeal.</p>
+                                </li>
+                                <li>
+                                    <h3>Skylights: Natural Illumination from Above</h3>
+                                    <p>Skylights are roof-mounted windows that flood interior spaces with passive overhead sunlight, creating brighter, more inviting rooms while reducing reliance on artificial lighting. These innovative glazing solutions work particularly well in windowless areas like bathrooms, hallways, and attic conversions. Modern skylights come in fixed, vented, or tubular designs, with aluminium frames enabling sleek, functional and low-profile installations.</p>
+                                </li>
+                                <li>
+                                    <h3>Clerestory windows: Elevated Light & Privacy</h3>
+                                    <p>Clerestory windows are high-placed horizontal windows that illuminate interior spaces while maintaining privacy and wall space below. Positioned above eye level, these architectural features bathe rooms in natural light without compromising security. They're ideal for modern and mid-century architecture.</p>
+                                </li>
+                            </ul>
+                        </div>
+
+
+
+                    </div>
+
+
+                </div>
+
+
+        <div class="widgets-2">
+
+                    <div class="small-widget products-widget">
+                        <h1 class="widget-title"><span aria-hidden="true" class="icon-get-started"></span>Products</h1>
+<p>Our wide range of products include:.</p>
+    <ul>
+        <li><a href="">- Custom designed aluminium windows.</a></li>
+        <li><a href="">- Awning and top hung aluminium windows.</a></li>
+        <li><a href="">- Aluminium Swing doors and double doors</a></li>
+        <li><a href="">- Aluminium curtain walling glass facades.</a></li>
+        <li><a href="">- Balcony Railings</a></li>
+        <li><a href="">- Shower cubicles</a></li>
+        <li><a href="">- Custom designed gazebos</a></li>
+        <li><a href="">- Custom designed glass pergollas</a></li>
+    </ul>
+                    </div>
+
+                    <div class="small-widget about-widget">
+                        <h1 class="widget-title"><span aria-hidden="true" class="icon-download"></span>About</h1>
+<p>We're a leading aluminium windows fabrication company in Kenya, specializing in custom-designed, energy-efficient, and durable aluminium windows for homes and offices. Explore our wide range of modern aluminium sliding window designs at competitive prices.</p>
+<p>We offer customized solutions for all your residential and commercial ironmongery and glazing needs.</p>
+<p>: <a href="#">You can count on our team to run a professional installation of your windows, glass fixing or any glazing projects in Kenya.</a></p>
+                    </div>
+
+                    <div class="small-widget resources-widget">
+                        <h1 class="widget-title"><span aria-hidden="true" class="icon-documentation"></span>Resources & Docs</h1>
+<p>Technical Documentation for our range of aluminium series, along with specifications and guides.</p>
+<p><a href="">docs.cb.co.ke</a></p>
+                    </div>
+
+                    <div class="small-widget glass-widget last">
+                        <h1 class="widget-title"><span aria-hidden="true" class="icon-jobs"></span>Glass</h1>
+<p>Our diverse range of architectural glass is sourced from well vetted and trusted manufactures to guarantee quality and excellence. Some popular <strong> glass types</strong> include:</p>
+<p><a href="//jobs.python.org">6mm clear</a></p>
+                    </div>
+            
+        </div>
+
+    </section>
+
+
+
+
+            </div>
+
+
+
+<footer class="main-footer">
+    <div class="container">
+        <!-- Copyright Section -->
+        <div class="copyright-section">
+            <p>&copy; <span id="copyright-year"></span> Capital Builders. All rights reserved.</p>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="social-media-links">
+            <a href="https://twitter.com/CapitalAllu" target="_blank" aria-label="Twitter">
+                <img src="img/icons/fa-twitter.png" alt="Twitter">
+            </a>
+            <a href="https://tiktok.com/@capital.builders" target="_blank" aria-label="TikTok">
+                <img src="img/icons/fa-tiktok.png" alt="TikTok">
+            </a>
+            <a href="https://instagram.com/capital.builders_" target="_blank" aria-label="Instagram">
+                <img src="img/icons/fa-instagram.png" alt="Instagram">
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=254724275877&text&app_absent=0" target="_blank" aria-label="WhatsApp">
+                <img src="img/icons/fa-whatsApp.png" alt="WhatsApp">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100086908637188&mibextid=ZbWKwL" target="_blank" aria-label="Facebook">
+                <img src="img/icons/fa-facebook.png" alt="Facebook">
+            </a>
+            <a href="https://t.me/CapitalHoldings" target="_blank" aria-label="Telegram">
+                <img src="img/icons/fa-telegram.png" alt="Telegram">
+            </a>
+        </div>
+
+
+    </div>
+</footer>
+
+<!-- JavaScript to update the copyright year dynamically -->
+<script>
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+</script>
+
+</div><!-- end #touchnav-wrapper -->
+
+</body>
+
+    <script src="js/config.js"></script>
+    <script src="js/index - Dev - Test.js"></script>
+    <script src="js/gallery-js.js"></script>
+    <script src="js/pinned-previews.js"></script>
+    <script src="js/thickness-options.js"></script>
+    <script src="js/add-to-cart.js"></script>
+</html>

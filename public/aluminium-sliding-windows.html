@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluminium Sliding Windows Cost Calculator | How to get an aluminium sliding windows quote| Benefits of sliding windows </title>
+    <link rel="stylesheet" href="css/styles-2.css">
+    <link rel="stylesheet" href="css/gallery-css.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <meta name="description" content="Calculate the cost of aluminium windows and glass prices in Kenya with our user-friendly tool. Get instant quotes for high quality sliding windows tailored to your needs.">
+
+
+
+</head>
+
+<body>
+
+    <div id="touchnav-wrapper">
+
+
+
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-navigation">
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
+            <!-- Menu Items -->
+            <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aluminium-sliding-windows.html">Sliding Windows</a></li>
+                    <li><a href="top-hung-windows.html">Top Hung Windows</a></li>
+                    <li><a href="aluminium-doors.html">Aluminium Doors</a></li>
+                    <li><a href="curtain-walling-facades.html">Curtain Walling Facades</a></li>
+                    <li><a href="office-partitions.html">Office Partitions</a></li>
+                    <li><a href="glass-types.html">Glass Types</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<section class="hero">
+    <div class="container">
+        <!-- Top row: Logo and Box -->
+        <div class="hero-top-row">
+            <!-- Logo on the left -->
+            <div class="site-headline">
+                <a href="/"><img class="site-logo" src="img/Capital builders logo.png" alt="Capital Builders Logo"></a>
+            </div>
+
+            <!-- Box on the right -->
+            <div class="hero-right-box">
+                <a href="/page1" class="menu-link">Page 1</a>
+                <a href="/page2" class="menu-link">Page 2</a>
+                <a href="/page3" class="menu-link">Page 3</a>
+            </div>
+        </div>
+
+<!-- Hero content below -->
+<div class="hero-content">
+    <div class="content-box">
+        
+<!-- Left Section -->
+<div class="left-section">
+    <div class="measurements-field">
+        <h4>>> Enter your window's measurements</h4>
+        <ul>
+            <li>
+                <label>Height (mm):*</label>
+                <input type="text" id="heightId">
+            </li>
+            <li>
+                <label>Width (mm):*</label>
+                <input type="text" id="widthId">
+            </li>
+        </ul>
+    </div>
+    <div class="properties-field">
+        <h4>>>> Configure properties</h4>
+        <ul>
+            <li class="profileColour">
+                <label>Profile colour:</label>
+                <select id="profileColour">
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                    <option value="silver">Silver</option>
+                    <option value="brown">Brown</option>
+                    <option value="champagne">Champagne</option>
+                    <option value="grey">Grey</option>
+                </select>
+            </li>
+            <li class="noOfPanels">
+                <label>Number of panels:</label>
+                <select id="noOfPanels" onchange="typeGallery()">
+                    <option value="2">2 panels</option>
+                    <option value="3">3 panels</option>
+                    <option value="4">4 panels</option>
+                </select>
+            </li>
+            <li class="fixedPartition">
+                <label>With/Without Fixed partition:</label>
+                <select id="fixedPartition" onchange="typeGallery()">
+                    <option value="noPartition">No Fixed Partition</option>
+                    <option value="doubleFixed">Top & Bottom</option>
+                    <option value="fixedTop">Fixed Top</option>
+                    <option value="fixedBottom">Fixed Bottom</option>
+                    <option value="openAbleTopFxBtm">Openable Top 1</option>
+                    <option value="openAbleTop">Openable Top 2</option>
+                </select>
+            </li>
+            <li class="glassType">
+                <label>Select Glass Type:</label>
+                <select id="glassType">
+                    <option value="clear">clear</option>
+                    <option value="oneWay">oneWay</option>
+                    <option value="tinted">tinted</option>
+                    <option value="obscured">obscured</option>
+                    <option value="nashiji">Nashiji</option>
+                </select>
+            </li>
+            <li class="glassThickness">
+                <label>Glass thickness:</label>
+                <select id="glassThickness">
+                    <option value="4mm">4mm</option>
+                    <option value="5mm">5mm</option>
+                    <option value="6mm">6mm</option>
+                    <option value="8mm">8mm</option>
+                    <option value="3+3mmLam">3+3mm Laminated</option>
+                    <option value="4+4mmLam">4+4mm Laminated</option>
+                    <option value="5+5mmLam">5+5mm Laminated</option>
+                    <option value="6mmTuff">6mm Toughened</option>
+                    <option value="8mmTuff">8mm Toughened</option>
+                    <option value="10mmTuff">10mm Toughened</option>
+                </select>
+            </li>
+            <li>
+            <div class="calculateCost">
+                <button class="startButton" onclick="start()">Calculate Cost</button>
+                <input type="text" id="cost" readonly> <!-- Add `readonly` if the input is not editable -->
+            </div>                
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+    <!-- Right Section -->
+    <div class="right-section">
+        <div class="previewArea">
+            <img src="img/type-1.png" id="img-type" width="300px" height="300px">
+            
+        </div>
+    </div>
+    </div>
+</div>
+
+    </div>
+</section>
+        
+        <section class="widgets-section">
+                <div class="list-widgets">
+
+                    <div class="gallery-widget">
+
+                        <div class="gallery-widget-header-container"> 
+                            <h1 class="widget-title"><span aria-hidden="true" class="icon-news"></span>Projects</h1>
+                            <p class="give-me-more"><a href="#our-projects" title="More-photos">>>>More</a></p>
+                        </div>
+                            
+<div class="gallery">
+    <!-- Row 1 -->
+    <div class="row">
+        <div class="folder">
+            <img src="img/aux-img/project1/project1_cover.jpeg" alt="Project 1" class="cover-photo">
+        </div>
+        <div class="folder">
+            <img src="img/aux-img/project2/project2_cover.jpg" alt="Project 2" class="cover-photo">
+        </div>
+        <div class="folder">
+            <img src="img/aux-img/project3/project3_cover.jpg" alt="Project 3" class="cover-photo">
+        </div>
+    </div>
+
+        <!-- Row 2 -->
+    <div class="row">
+        <div class="folder">
+            <img src="img/aux-img/project4/project4_cover.jpg" alt="Project 1" class="cover-photo">
+        </div>
+        <div class="folder">
+            <img src="img/aux-img/project5/project5_cover.jpg" alt="Project 2" class="cover-photo">
+        </div>
+        <div class="folder">
+            <img src="img/aux-img/project6/project6_cover.jpg" alt="Project 3" class="cover-photo">
+        </div>
+    </div>
+
+        <!-- Row 3 -->
+
+</div>
+
+<!-- Folder content for Project 1 -->
+<div class="folder-overlay" id="folder1">
+    <div class="folder-content">
+            <button class="back-button">Back</button>
+        <img src="img/aux-img/project1/project1_1.jpg" alt="Project 1 Image 1">
+        <img src="img/aux-img/project1/project1_2.jpg" alt="Project 1 Image 2">
+        <img src="img/aux-img/project1/project1_3.jpg" alt="Project 1 Image 3">
+        <div class="nav-arrows">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Folder content for Project 2 -->
+<div class="folder-overlay" id="folder2">
+    <div class="folder-content">
+            <button class="back-button">Back</button>
+        <img src="img/aux-img/project2/project2_1.jpg" alt="Project 2 Image 1">
+        <img src="img/aux-img/project2/project2_2.jpg" alt="Project 2 Image 2">
+        <img src="img/aux-img/project2/project2_3.jpg" alt="Project 2 Image 3">
+        <div class="nav-arrows">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+
+        </div>
+    </div>
+</div>
+
+<!-- Folder content for Project 3 -->
+<div class="folder-overlay" id="folder3">
+    <div class="folder-content">
+            <button class="back-button">Back</button>
+        <img src="img/aux-img/project3/project3_1.jpg" alt="Project 3 Image 1">
+        <img src="img/aux-img/project3/project3_2.jpg" alt="Project 3 Image 2">
+        <img src="img/aux-img/project3/project3_3.jpg" alt="Project 3 Image 3">
+        <div class="nav-arrows">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Folder content for Project 4 -->
+<div class="folder-overlay" id="folder3">
+    <div class="folder-content">
+            <button class="back-button">Back</button>
+        <img src="img/aux-img/project4/project4_1.jpg" alt="Project 4 Image 1">
+        <img src="img/aux-img/project4/project4_2.jpg" alt="Project 4 Image 2">
+        <img src="img/aux-img/project4/project4_3.jpg" alt="Project 4 Image 3">
+        <div class="nav-arrows">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Folder content for Project 5 -->
+<div class="folder-overlay" id="folder3">
+    <div class="folder-content">
+            <button class="back-button">Back</button>
+        <img src="img/aux-img/project5/project5_1.jpg" alt="Project 5 Image 1">
+        <img src="img/aux-img/project5/project5_2.jpg" alt="Project 5 Image 2">
+        <img src="img/aux-img/project5/project5_3.jpg" alt="Project 5 Image 3">
+        <div class="nav-arrows">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Folder content for Project 6 -->
+<div class="folder-overlay" id="folder3">
+    <div class="folder-content">
+            <button class="back-button">Back</button>
+        <img src="img/aux-img/project6/project6_1.jpg" alt="Project 6 Image 1">
+        <img src="img/aux-img/project6/project6_2.jpg" alt="Project 6 Image 2">
+        <img src="img/aux-img/project6/project6_3.jpg" alt="Project 6 Image 3">
+        <img src="img/aux-img/project6/project6_4.jpg" alt="Project 6 Image 4">
+        <img src="img/aux-img/project6/project6_5.jpg" alt="Project 6 Image 5">
+        <div class="nav-arrows">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+            
+        </div>
+    </div>
+</div>
+
+                    </div>
+
+                    <div class="userGuide-widget">
+                        
+                        
+                            <h1 class="widget-title"><span aria-hidden="true" class="icon-calendar"></span>How to get an aluminium sliding windows quotation</h1>
+                            
+                            <ul class="user-guide-items">
+                                
+                                
+                                
+                                <li>
+<span class="steps">Step 1</span> <h2>Enter the <a href="#widthId">width</a> and <a href="#heightId">height</a> of your aluminum window in millimeters</h2>
+</li>
+                                
+                                
+                                
+                                <li>
+<span class="steps">Step 2</span> <h2>Select your preferred aluminium <a href="#profileColour">colour</a></h2>
+</li>
+                                
+                                
+                                
+                                <li>
+<span class="steps">Step 3</span> <h2>Specify the number of panels for your modern sliding window <a href="#noOfPanels">here</a></h2>
+</li>
+                                
+                                
+                                
+                                <li>
+<span class="steps">Step 4</span> <h2>Choose whether the window should have a <a href="#fixedPartition">fixed aluminium partition</a></h2>
+</li>
+                                
+                                
+                                
+                                <li>
+<span class="steps">Step 5</span> <h2>Configure glass types: Thickness and type <a href="#glassType">in this drop-down box</a></h2>
+</li>
+
+
+                                <li>
+<span class="steps">Step 6</span> <h2>Press <a href="#"> 'Calculate cost'</a>. The cost of your custom aluminium sliding window in Nairobi will be populated in the cost box </h2>
+</li>
+
+                                <li>
+<span class="steps">Step 7</span> <h2>Add your item to <a href="#">'Cart'</a>. A quotation for aluminium windows or doors should be available for download at the 'downloads' section</h2>
+</li>
+                                
+                                
+                            </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="blogs-widget">
+
+                    <div class="blog1-widget">
+
+                        <div class="blog1-widget-header-container"> 
+                            <h1 class="widget-title"><span aria-hidden="true" class="icon-news"></span>Why most home owners choose sliding windows</h1>
+                        </div>
+                            
+<div class="blog1">
+    <ol class="sliding-windows-benefits">
+        <li>
+            <h2>Easy and simple to operate</h2>
+            <p>-Aluminium sliding windows are incredibly easy to operate as you only need to move them in a sideways motion. Further, the sliding panels sit on anti-friction roller wheels which makes sliding the window very effortless.</p>
+            <div class="blog-img"> <img src="img/blog-img/sliding-easy-operation.png" alt="Illustration of how a sliding window opens"> </div>
+        </li>
+        <li>
+            <h2>Improved Airflow</h2>
+            <p>The pependicular orientation of Aluminium slider windows ensures minimal obstruction, providing far better airflow compared to many other window designs.</p>
+            <div class="blog-img"> <img src="img/blog-img/improved-airflow.png">
+                <a href="https://www.freepik.com/free-vector/young-girl-sitting-window-with-tablet-message-mail-teenager-flat-vector-illustration-communication-digital-technology-concept_11543297.htm#from_element=detail_alsolike">Img by: pch.vector</a>
+            </div>
+        </li>
+        <li>
+            <h2>Minimal Maintenance</h2>
+            <p>The simple sliding mechanism of aluminium slider windows have very few components that can be damaged.</p>
+            <div class="blog-img"> <img src="img/blog-img/minimal-maintenance.png">
+                <a href="https://www.freepik.com/free-vector/handyman-concept-illustration_82466226.htm#fromView=search&page=1&position=0&uuid=612c2d36-2590-4e63-bb04-c605bae63b6a&query=handyman-concept-illustration">Img Source @storyset</a>
+            </div>
+        </li>
+        <li>
+            <h2>Space efficient and versatile</h2>
+            <p>Unlike traditional swing windows which occupy exterior space when open, sliders open along the wall's plane. If your preference is to not have extruding window panes on your walkway, then don't hesitate to call us! We're a reputable sliding window suppliers in Nairobi.</p>
+            <div class="blog-img"> <img src="img/blog-img/sliding-illustr.png">
+            </div>
+        </li>
+        
+    </ol>
+</div>
+
+<!-- Sliding windows gallery  -->
+                    <div class="aux-gallery-widget">
+
+                        <div class="gallery-widget-header-container"> 
+                            <h1 class="widget-title"><span aria-hidden="true" class="icon-news"></span>Sample aluminium sliding windows</h1>
+                        </div>
+                            
+<div class="gallery">
+    <!-- Row 1 -->
+    <div class="row">
+        <div class="folder">
+            <img src="img/aux-img/aux-gallery/sample-sliding-windows/project1/project1_cover.jpg" alt="Sample black aluminium sliding window with top and bottom fixed glass partitions" class="cover-photo">
+        </div>
+        <div class="folder">
+            <img src="img/aux-img/aux-gallery/sample-sliding-windows/project2/project2_cover.jpg" alt="Sample grey aluminium sliding window with three sliding panels and top fixed glass partition" class="cover-photo">
+        </div>
+        <div class="folder">
+            <img src="img/aux-img/aux-gallery/sample-sliding-windows/project3/project3_cover.jpg" alt="Sample white aluminium sliding window with three sliding panels and top fixed glass partition" class="cover-photo">
+        </div>
+    </div>
+
+        <!-- Row 2 -->
+    <div class="row">
+        <div class="folder">
+            <img src="img/aux-img/aux-gallery/sample-sliding-windows/project4/project4_cover.jpg" alt="Sample brown aluminium sliding window with three sliding panels and no aluminium fixed partitons" class="cover-photo">
+        </div>
+        <div class="folder">
+            <img src="img/aux-img/aux-gallery/sample-sliding-windows/project5/project5_cover.jpg" alt="Sample colour grey aluminium sliding window with three sliding panels and a top fixed glass partition" class="cover-photo">
+        </div>
+        <div class="folder">
+            <img src="img/aux-img/aux-gallery/sample-sliding-windows/project6/project6_cover.jpg" alt="Sample colour white aluminium sliding window with three sliding panels and no fixed glass partition" class="cover-photo">
+        </div>
+    </div>
+
+        <!-- Row 3 -->
+
+</div>
+
+<!-- Folder content for Project 1 -->
+<div class="folder-overlay" id="folder1">
+    <div class="folder-content">
+            <button class="back-button">Back</button>
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project1/project1_1.jpg" alt="Project 1 Sliding window Image 1">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project1/project1_2.jpg" alt="Project 1 Sliding window Image 2">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project1/project1_3.jpg" alt="Project 1 Sliding window Image 3">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project1/project1_4.jpg" alt="Project 1 Sliding window Image 4">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project1/project1_5.jpeg" alt="Project 1 Sliding window Image 5">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project1/project1_6.jpeg" alt="Project 1 Sliding window Image 6">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project1/project1_7.jpeg" alt="Project 1 Sliding window Image 7">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project1/project1_8.jpg" alt="Project 1 Sliding window Image 8">
+        <div class="nav-arrows">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Folder content for Project 2 -->
+<div class="folder-overlay" id="folder2">
+    <div class="folder-content">
+            <button class="back-button">Back</button>
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project2/project2_1.jpg" alt="Project 2 Sliding window Image 1">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project2/project2_2.jpg" alt="Project 2 Sliding window Image 2">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project2/project2_3.jpg" alt="Project 2 Sliding window Image 3">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project2/project2_4.jpg" alt="Project 2 Sliding window Image 4">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project2/project2_5.jpg" alt="Project 2 Sliding window Image 5">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project2/project2_6.jpg" alt="Project 2 Sliding window Image 6">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project2/project2_7.jpg" alt="Project 2 Sliding window Image 7">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project2/project2_8.jpg" alt="Project 2 Sliding window Image 8">
+        <div class="nav-arrows">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+
+        </div>
+    </div>
+</div>
+
+<!-- Folder content for Project 3 -->
+<div class="folder-overlay" id="folder3">
+    <div class="folder-content">
+            <button class="back-button">Back</button>
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project3/project3_1.jpg" alt="Project 3 Sliding window Image 1">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project3/project3_2.jpg" alt="Project 3 Sliding window Image 2">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project3/project3_3.jpg" alt="Project 3 Sliding window Image 3">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project3/project3_4.jpg" alt="Project 3 Sliding window Image 4">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project3/project3_5.jpg" alt="Project 3 Sliding window Image 5">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project3/project3_6.jpeg" alt="Project 3 Sliding window Image 6">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project3/project3_7.jpg" alt="Project 3 Sliding window Image 7">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project3/project3_8.jpg" alt="Project 3 Sliding window Image 8">
+        <div class="nav-arrows">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Folder content for Project 4 -->
+<div class="folder-overlay" id="folder3">
+    <div class="folder-content">
+            <button class="back-button">Back</button>
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project4/project4_1.jpg" alt="Project 4 Sliding window Image 1">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project4/project4_2.jpg" alt="Project 4 Sliding window Image 2">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project4/project4_3.jpg" alt="Project 4 Sliding window Image 3">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project4/project4_4.jpg" alt="Project 4 Sliding window Image 4">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project4/project4_5.jpg" alt="Project 4 Sliding window Image 5">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project4/project4_6.jpg" alt="Project 4 Sliding window Image 6">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project4/project4_7.jpg" alt="Project 4 Sliding window Image 7">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project4/project4_8.jpg" alt="Project 4 Sliding window Image 8">
+        <div class="nav-arrows">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Folder content for Project 5 -->
+<div class="folder-overlay" id="folder3">
+    <div class="folder-content">
+            <button class="back-button">Back</button>
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project5/project5_1.jpg" alt="Project 5 Sliding window Image 1">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project5/project5_2.jpg" alt="Project 5 Sliding window Image 2">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project5/project5_3.jpg" alt="Project 5 Sliding window Image 3">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project5/project5_4.jpg" alt="Project 5 Sliding window Image 4">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project5/project5_5.jpg" alt="Project 5 Sliding window Image 5">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project5/project5_6.jpg" alt="Project 5 Sliding window Image 6">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project5/project5_7.jpg" alt="Project 5 Sliding window Image 7">
+        <div class="nav-arrows">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Folder content for Project 6 -->
+<div class="folder-overlay" id="folder3">
+    <div class="folder-content">
+            <button class="back-button">Back</button>
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project6/project6_1.jpg" alt="Project 6 Sliding window Image 1">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project6/project6_2.jpg" alt="Project 6 Sliding window Image 2">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project6/project6_3.jpg" alt="Project 6 Sliding window Image 3">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project6/project6_4.jpg" alt="Project 6 Sliding window Image 4">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project6/project6_5.jpg" alt="Project 6 Sliding window Image 5">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project6/project6_6.jpg" alt="Project 6 Sliding window Image 6">
+        <img src="img/aux-img/aux-gallery/sample-sliding-windows/project6/project6_7.jpg" alt="Project 6 Sliding window Image 7">
+        <div class="nav-arrows">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+            
+        </div>
+    </div>
+</div>
+
+                    </div>
+
+
+
+                    </div>
+
+                    <div class="blog2-widget">
+
+                        <div class="blog1-widget-header-container"> 
+                            <h1 class="widget-title"><span aria-hidden="true" class="icon-news"></span>Frequently Asked Questions (FAQs)</h1>
+                        </div>
+<div class="blog2">
+    <ul class="faqs">
+        <li>
+            <h3>Are aluminium sliding windows and doors secure?</h3>
+            <p>Very much. The material’s strength makes it difficult to break or force open, and several measures can be taken for added security. These may include:
+            <ul>
+                <li>Adding anti-burglar grills</li>
+                <li>Using multi-point locking systems</li>
+            </ul>
+            </p>
+            <div class="blog-img"> <img src="img/blog-img/window-security.png">
+                <a href="http://www.freepik.com/free-vector/thief-concept-illustration_18560677.htm#fromView=search&page=1&position=24&uuid=e8ec4f84-9d73-48da-9641-bf488c294abb&query=illustration+to+show+improved+airflow+through+windows">Img Source @storyset</a>
+            </div>
+        </li>
+        <li>
+            <h3>Can aluminium windows be customized?</h3>
+            <p>Absolutely! Aluminium windows and doors offer endless customization options. You can choose from a variety of designs and finishes to match your specific taste.</p>
+        </li>
+        <li>
+            <h3>How long do they last?</h3>
+            <p>Aluminium slider windows are known for their longevity. With proper installation, you can expect them to last for decades.</p>
+
+        </li>
+        <li>
+            <h3>Cost</h3>
+            <p>The price of sliding windows in Kenya and how it compares with traditional ones is a usual question among aspiring homeowners. Interestingly, aluminium sliding window frames cost only marginally more than steel casement designs, while being a lot more affordable than uPVC alternatives. This makes aluminium framing a budget-friendly choice without compromising on modern functionality or aesthetic appeal.</p>
+            <p></p>
+        </li>
+        <li>
+            <h3>What maintenance do aluminium windows and doors require?</h3>
+            <p>The mechanical parts (Rollers, hinges etc) can last years without needing any kind of repair. They also do not require regular painting or sealing. Simply cleaning your glass window with soap and water keeps it looking good as new. The powder-coated finishes for aluminium profiles are also resistant to scratches and fading, reducing the need for frequent upkeep.</p>
+            <div class="blog-img"> <img src="img/blog-img/maintenance-and-repair.png">
+                <a href="https://www.freepik.com/premium-vector/summer-house-installation-abstract-concept-vector-illustration_214448049.htm#fromView=search&page=1&position=28&uuid=fc8612a2-47ea-4e7d-9106-80d88aff5ba0&query=illustration+to+show+minimal+maintenance+required+in+construction">Image by @Rastudio</a>
+            </div>
+        </li>
+        <li>
+            <h3>Can they reduce noise?</h3>
+            <p>Yes, aluminium windows and doors, especially when paired with double-glazed or laminated glass, offer excellent sound insulation. This makes them perfect for homes and offices located in noisy urban areas or near busy roads.</p>
+            <div class="blog-img" id="soundproofing-glass"> <img src="img/blog-img/double-glazed-illustr.png"> <img src="img/blog-img/laminated-glass-illustr.png">
+
+            </div>
+            <p>Contact one of our technicians <a href="#">here</a> for more information on soundproofing glass windows in Kenya.</p>
+        </li>
+        <li>
+            <h3>How do I choose the right type of aluminium windows for my property?</h3>
+            <p>The best choice depends on your specific needs, such as uses case, ventilation, space, and design preferences. For example, sliding windows and doors are ideal for areas with limited space, while casement windows offer excellent airflow.</p>
+        </li>
+        <li>
+            <h3>Where can I get high-quality aluminium windows and doors in Kenya?</h3>
+            <p>To get aluminium windows and doors in Kenya, look no further than Capital Builders. We specialize in custom designs, professional installation, and durable solutions tailored to your needs. Contact us today for a free consultation and quote!</p>
+        </li>
+    </ul>
+    
+</div>
+                            
+
+
+                    </div>
+
+                </div>
+
+
+
+        <div class="widgets-2">
+
+                    <div class="small-widget products-widget">
+                        <h1 class="widget-title"><span aria-hidden="true" class="icon-get-started"></span>Products</h1>
+<p>Our wide range of products include:.</p>
+    <ul>
+        <li><a href="">- Custom designed aluminium windows.</a></li>
+        <li><a href="">- Awning and top hung aluminium windows.</a></li>
+        <li><a href="">- Aluminium Swing doors and double doors</a></li>
+        <li><a href="">- Aluminium curtain walling glass facades.</a></li>
+        <li><a href="">- Balcony Railings</a></li>
+        <li><a href="">- Shower cubicles</a></li>
+        <li><a href="">- Custom designed gazebos</a></li>
+        <li><a href="">- Custom designed glass pergollas</a></li>
+    </ul>
+                    </div>
+
+                    <div class="small-widget about-widget">
+                        <h1 class="widget-title"><span aria-hidden="true" class="icon-download"></span>About</h1>
+<p>We are specialists of aluminium windows fabrication in Kenya, specializing in custom-designed, energy-efficient, and durable windows for homes and offices. Explore our wide range of modern aluminium window designs at competitive prices.</p>
+<p>: <a href="#">You can count on our team to run a professional installation of your windows, glass fixing or any glazing projects in Kenya.</a></p>
+                    </div>
+
+                    <div class="small-widget resources-widget">
+                        <h1 class="widget-title"><span aria-hidden="true" class="icon-documentation"></span>Resources & Docs</h1>
+<p>Technical Documentation for our range of aluminium series, along with specifications and guides.</p>
+<p><a href="">docs.cb.co.ke</a></p>
+                    </div>
+
+                    <div class="small-widget glass-widget last">
+                        <h1 class="widget-title"><span aria-hidden="true" class="icon-jobs"></span>Glass</h1>
+<p>Our diverse range of architectural glass is sourced from well vetted and trusted manufactures to guarantee quality and excellence. Some popular <strong> glass types</strong> include:</p>
+<p><a href="//jobs.python.org">6mm clear</a></p>
+                    </div>
+            
+        </div>
+
+    </section>
+
+
+
+
+            </div>
+
+
+
+<footer class="main-footer">
+    <div class="container">
+        <!-- Copyright Section -->
+        <div class="copyright-section">
+            <p>&copy; <span id="copyright-year"></span> Capital Builders. All rights reserved.</p>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="social-media-links">
+            <a href="https://twitter.com/CapitalAllu" target="_blank" aria-label="Twitter">
+                <img src="img/icons/fa-twitter.png" alt="Twitter">
+            </a>
+            <a href="https://tiktok.com/@capital.builders" target="_blank" aria-label="TikTok">
+                <img src="img/icons/fa-tiktok.png" alt="TikTok">
+            </a>
+            <a href="https://instagram.com/capital.builders_" target="_blank" aria-label="Instagram">
+                <img src="img/icons/fa-instagram.png" alt="Instagram">
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=254724275877&text&app_absent=0" target="_blank" aria-label="WhatsApp">
+                <img src="img/icons/fa-whatsApp.png" alt="WhatsApp">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100086908637188&mibextid=ZbWKwL" target="_blank" aria-label="Facebook">
+                <img src="img/icons/fa-facebook.png" alt="Facebook">
+            </a>
+            <a href="https://t.me/CapitalHoldings" target="_blank" aria-label="Telegram">
+                <img src="img/icons/fa-telegram.png" alt="Telegram">
+            </a>
+        </div>
+
+
+    </div>
+</footer>
+
+<!-- JavaScript to update the copyright year dynamically -->
+<script>
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+</script>
+
+</div><!-- end #touchnav-wrapper -->
+
+</body>
+
+    <script src="js/config.js"></script>
+    <script src="js/index - Dev - Test.js"></script>
+    <script src="js/gallery-js.js"></script>
+    <script src="js/pinned-previews.js"></script>
+    <script src="js/thickness-options.js"></script>
+</html>
