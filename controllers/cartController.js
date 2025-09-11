@@ -1,6 +1,6 @@
 // controllers/cartController.js - Updated version
 const logger = require('../utils/logger');
-const CartService = require('../services/CartService');
+const CartService = require('../services/cartService');
 
 class CartController {
   async getCart(req, res) {
@@ -88,5 +88,6 @@ class CartController {
     }
   }
 }
+
 
 module.exports = new CartController();
