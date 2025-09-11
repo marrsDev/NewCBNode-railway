@@ -1,0 +1,112 @@
+{"level":"info","message":"🚀 Server running on port 3000","timestamp":"2025-09-10T06:55:23.929Z"}
+{"level":"info","message":"🚀 Server running on port 3000","timestamp":"2025-09-10T06:57:48.532Z"}
+{"level":"info","message":"✅ MongoDB connected successfully","timestamp":"2025-09-10T06:57:48.905Z"}
+{"level":"info","message":"✅ Route \"/api/calculations\" loaded with 2 handlers.","timestamp":"2025-09-10T07:00:46.489Z"}
+{"level":"info","message":"✅ Route \"/api/cart\" loaded with 5 handlers.","timestamp":"2025-09-10T07:00:46.513Z"}
+{"level":"info","message":"✅ Route \"/api/pricing\" loaded with 2 handlers.","timestamp":"2025-09-10T07:00:46.517Z"}
+{"level":"info","message":"✅ Route \"/api/preview\" loaded with 1 handlers.","timestamp":"2025-09-10T07:00:46.520Z"}
+{"level":"info","message":"✅ Express app has 12 middleware/routes mounted.","timestamp":"2025-09-10T07:00:46.524Z"}
+{"level":"info","message":"🚀 Server running on port 3000","timestamp":"2025-09-10T07:00:46.546Z"}
+{"level":"info","message":"✅ MongoDB connected successfully","timestamp":"2025-09-10T07:00:46.924Z"}
+{"level":"info","message":"✅ Route \"/api/calculations\" loaded with 2 handlers.","timestamp":"2025-09-10T07:05:03.515Z"}
+{"level":"info","message":"✅ Route \"/api/cart\" loaded with 5 handlers.","timestamp":"2025-09-10T07:05:03.708Z"}
+{"level":"info","message":"✅ Route \"/api/pricing\" loaded with 2 handlers.","timestamp":"2025-09-10T07:05:03.851Z"}
+{"level":"info","message":"✅ Route \"/api/preview\" loaded with 1 handlers.","timestamp":"2025-09-10T07:05:03.990Z"}
+{"level":"info","message":"✅ Express app has 12 middleware/routes mounted.","timestamp":"2025-09-10T07:05:04.164Z"}
+{"level":"info","message":"🚀 Server running on port 3000","timestamp":"2025-09-10T07:05:04.308Z"}
+{"level":"info","message":"✅ MongoDB connected successfully","timestamp":"2025-09-10T07:05:04.687Z"}
+{"fixedPartition":"noPartition","glassThickness":"4mm","glassType":"clear","height":1200,"level":"info","message":"📥 Input received:","noOfPanels":"2","profileColour":"white","timestamp":"2025-09-10T07:05:47.561Z","width":1200}
+{"level":"info","message":"🔄 Updated glass price to:","timestamp":"2025-09-10T07:05:47.680Z"}
+{"fixedPartition":"noPartition","level":"info","message":"🔍 Resolving type for:","noOfPanels":"2","timestamp":"2025-09-10T07:05:47.685Z"}
+{"level":"info","message":"🔍 Mapping key:","timestamp":"2025-09-10T07:05:47.687Z"}
+{"level":"info","message":"🔑 Resolved type key:","timestamp":"2025-09-10T07:05:47.689Z"}
+{"0":"type1","1":"type2","10":"type11","11":"type12","12":"type13","13":"type14","14":"type15","15":"type16","16":"type17","17":"type18","18":"type19","19":"type20","2":"type3","20":"type21","3":"type4","4":"type5","5":"type6","6":"type7","7":"type8","8":"type9","9":"type10","level":"info","message":"📋 Available window types:","timestamp":"2025-09-10T07:05:47.690Z"}
+{"level":"info","message":"🧮 Calculator type:","timestamp":"2025-09-10T07:05:47.694Z"}
+{"level":"info","message":"✅ Calculation successful","timestamp":"2025-09-10T07:05:47.698Z"}
+{"level":"info","message":"✅ Route \"/api/calculations\" loaded with 2 handlers.","timestamp":"2025-09-10T07:13:58.945Z"}
+{"level":"info","message":"✅ Route \"/api/cart\" loaded with 5 handlers.","timestamp":"2025-09-10T07:13:58.969Z"}
+{"level":"info","message":"✅ Route \"/api/pricing\" loaded with 2 handlers.","timestamp":"2025-09-10T07:13:58.972Z"}
+{"level":"info","message":"✅ Route \"/api/preview\" loaded with 1 handlers.","timestamp":"2025-09-10T07:13:58.975Z"}
+{"level":"info","message":"✅ Express app has 12 middleware/routes mounted.","timestamp":"2025-09-10T07:13:58.980Z"}
+{"level":"info","message":"🚀 Server running on port 3000","timestamp":"2025-09-10T07:13:59.003Z"}
+{"level":"info","message":"✅ MongoDB connected successfully","timestamp":"2025-09-10T07:13:59.359Z"}
+{"fixedPartition":"noPartition","glassThickness":"4mm","glassType":"clear","height":1200,"level":"debug","message":"📥 Input received:","noOfPanels":"2","profileColour":"white","timestamp":"2025-09-10T07:14:18.801Z","width":1200}
+{"level":"debug","message":"🔄 Updated glass price to:","timestamp":"2025-09-10T07:14:18.910Z"}
+{"fixedPartition":"noPartition","level":"debug","message":"🔍 Resolving type for:","noOfPanels":"2","timestamp":"2025-09-10T07:14:18.916Z"}
+{"level":"debug","message":"🔍 Mapping key:","timestamp":"2025-09-10T07:14:18.919Z"}
+{"level":"debug","message":"🔑 Resolved type key:","timestamp":"2025-09-10T07:14:18.920Z"}
+{"0":"type1","1":"type2","10":"type11","11":"type12","12":"type13","13":"type14","14":"type15","15":"type16","16":"type17","17":"type18","18":"type19","19":"type20","2":"type3","20":"type21","3":"type4","4":"type5","5":"type6","6":"type7","7":"type8","8":"type9","9":"type10","level":"debug","message":"📋 Available window types:","timestamp":"2025-09-10T07:14:18.921Z"}
+{"level":"debug","message":"🧮 Calculator type:","timestamp":"2025-09-10T07:14:18.923Z"}
+{"level":"debug","message":"✅ Calculation successful","timestamp":"2025-09-10T07:14:18.928Z"}
+{"breakdown":{"glass":2015.0040300080598,"guiders":392,"headerP":870,"interLock":1595,"jambP":1740,"lock":1900,"lockSection":1595,"rollers":800,"rubber":504,"sillP":870,"topBottom":1595,"woolFile":480},"cost":18447.465178560356,"fixedPartition":"noPartition","glassThickness":"4mm","glassType":"clear","height":1200,"level":"debug","message":"📥 Input received:","noOfPanels":"2","profileColour":"white","timestamp":"2025-09-10T07:14:46.034Z","width":1200}
+{"level":"debug","message":"🔄 Updated glass price to:","timestamp":"2025-09-10T07:14:46.060Z"}
+{"fixedPartition":"noPartition","level":"debug","message":"🔍 Resolving type for:","noOfPanels":"2","timestamp":"2025-09-10T07:14:46.062Z"}
+{"level":"debug","message":"🔍 Mapping key:","timestamp":"2025-09-10T07:14:46.065Z"}
+{"level":"debug","message":"🔑 Resolved type key:","timestamp":"2025-09-10T07:14:46.068Z"}
+{"0":"type1","1":"type2","10":"type11","11":"type12","12":"type13","13":"type14","14":"type15","15":"type16","16":"type17","17":"type18","18":"type19","19":"type20","2":"type3","20":"type21","3":"type4","4":"type5","5":"type6","6":"type7","7":"type8","8":"type9","9":"type10","level":"debug","message":"📋 Available window types:","timestamp":"2025-09-10T07:14:46.069Z"}
+{"level":"debug","message":"🧮 Calculator type:","timestamp":"2025-09-10T07:14:46.072Z"}
+{"level":"debug","message":"✅ Calculation successful","timestamp":"2025-09-10T07:14:46.074Z"}
+{"level":"info","message":"✅ Route \"/api/calculations\" loaded with 2 handlers.","timestamp":"2025-09-10T07:29:01.618Z"}
+{"level":"info","message":"✅ Route \"/api/cart\" loaded with 5 handlers.","timestamp":"2025-09-10T07:29:01.659Z"}
+{"level":"info","message":"✅ Route \"/api/pricing\" loaded with 2 handlers.","timestamp":"2025-09-10T07:29:01.662Z"}
+{"level":"info","message":"✅ Route \"/api/preview\" loaded with 1 handlers.","timestamp":"2025-09-10T07:29:01.668Z"}
+{"level":"info","message":"✅ Express app has 12 middleware/routes mounted.","timestamp":"2025-09-10T07:29:01.673Z"}
+{"level":"info","message":"🚀 Server running on port 3000","timestamp":"2025-09-10T07:29:01.696Z"}
+{"level":"info","message":"✅ MongoDB connected successfully","timestamp":"2025-09-10T07:29:02.100Z"}
+{"level":"info","message":"✅ Route \"/api/calculations\" loaded with 2 handlers.","timestamp":"2025-09-10T07:31:09.196Z"}
+{"level":"info","message":"✅ Route \"/api/cart\" loaded with 5 handlers.","timestamp":"2025-09-10T07:31:09.219Z"}
+{"level":"info","message":"✅ Route \"/api/pricing\" loaded with 2 handlers.","timestamp":"2025-09-10T07:31:09.223Z"}
+{"level":"info","message":"✅ Route \"/api/preview\" loaded with 1 handlers.","timestamp":"2025-09-10T07:31:09.226Z"}
+{"level":"info","message":"✅ Express app has 12 middleware/routes mounted.","timestamp":"2025-09-10T07:31:09.230Z"}
+{"level":"info","message":"🚀 Server running on port 3000","timestamp":"2025-09-10T07:31:09.252Z"}
+{"level":"info","message":"✅ MongoDB connected successfully","timestamp":"2025-09-10T07:31:09.629Z"}
+{"level":"info","message":"✅ Route \"/api/calculations\" loaded with 2 handlers.","timestamp":"2025-09-10T07:32:34.887Z"}
+{"level":"info","message":"✅ Route \"/api/cart\" loaded with 5 handlers.","timestamp":"2025-09-10T07:32:34.916Z"}
+{"level":"info","message":"✅ Route \"/api/pricing\" loaded with 2 handlers.","timestamp":"2025-09-10T07:32:34.932Z"}
+{"level":"info","message":"✅ Route \"/api/preview\" loaded with 1 handlers.","timestamp":"2025-09-10T07:32:34.941Z"}
+{"level":"info","message":"✅ Express app has 12 middleware/routes mounted.","timestamp":"2025-09-10T07:32:34.944Z"}
+{"level":"info","message":"🚀 Server running on port 3000","timestamp":"2025-09-10T07:32:34.969Z"}
+{"level":"info","message":"✅ MongoDB connected successfully","timestamp":"2025-09-10T07:32:35.346Z"}
+{"level":"info","message":"✅ Route \"/api/calculations\" loaded with 2 handlers.","timestamp":"2025-09-10T07:33:34.592Z"}
+{"level":"info","message":"✅ Route \"/api/cart\" loaded with 5 handlers.","timestamp":"2025-09-10T07:33:34.617Z"}
+{"level":"info","message":"✅ Route \"/api/pricing\" loaded with 2 handlers.","timestamp":"2025-09-10T07:33:34.620Z"}
+{"level":"info","message":"✅ Route \"/api/preview\" loaded with 1 handlers.","timestamp":"2025-09-10T07:33:34.622Z"}
+{"level":"info","message":"✅ Express app has 12 middleware/routes mounted.","timestamp":"2025-09-10T07:33:34.626Z"}
+{"level":"info","message":"🚀 Server running on port 3000","timestamp":"2025-09-10T07:33:34.649Z"}
+{"level":"info","message":"✅ MongoDB connected successfully","timestamp":"2025-09-10T07:33:35.010Z"}
+{"level":"debug","message":"Getting cart for ID:","timestamp":"2025-09-10T07:34:43.730Z"}
+{"level":"debug","message":"Found items:","timestamp":"2025-09-10T07:34:43.776Z"}
+{"aluminiumFraming":0,"glass":0,"grandTotal":0,"guiders":0,"installation":0,"level":"debug","lock":0,"message":"Calculated totals:","projectHandle":0,"rollers":0,"rubber":0,"sideArms":0,"timestamp":"2025-09-10T07:34:43.804Z","totalItems":0,"woolFile":0}
+{"fixedPartition":"noPartition","glassThickness":"4mm","glassType":"clear","height":1200,"level":"debug","message":"📥 Input received:","noOfPanels":"2","profileColour":"white","timestamp":"2025-09-10T07:34:54.423Z","width":1200}
+{"level":"debug","message":"🔄 Updated glass price to:","timestamp":"2025-09-10T07:34:54.518Z"}
+{"fixedPartition":"noPartition","level":"debug","message":"🔍 Resolving type for:","noOfPanels":"2","timestamp":"2025-09-10T07:34:54.523Z"}
+{"level":"debug","message":"🔍 Mapping key:","timestamp":"2025-09-10T07:34:54.525Z"}
+{"level":"debug","message":"🔑 Resolved type key:","timestamp":"2025-09-10T07:34:54.527Z"}
+{"0":"type1","1":"type2","10":"type11","11":"type12","12":"type13","13":"type14","14":"type15","15":"type16","16":"type17","17":"type18","18":"type19","19":"type20","2":"type3","20":"type21","3":"type4","4":"type5","5":"type6","6":"type7","7":"type8","8":"type9","9":"type10","level":"debug","message":"📋 Available window types:","timestamp":"2025-09-10T07:34:54.530Z"}
+{"level":"debug","message":"🧮 Calculator type:","timestamp":"2025-09-10T07:34:54.533Z"}
+{"level":"debug","message":"✅ Calculation successful","timestamp":"2025-09-10T07:34:54.538Z"}
+{"breakdown":{"glass":2015.0040300080598,"guiders":392,"headerP":870,"interLock":1595,"jambP":1740,"lock":1900,"lockSection":1595,"rollers":800,"rubber":504,"sillP":870,"topBottom":1595,"woolFile":480},"cost":18447.465178560356,"fixedPartition":"noPartition","glassThickness":"4mm","glassType":"clear","height":1200,"level":"debug","message":"📥 Input received:","noOfPanels":"2","profileColour":"white","timestamp":"2025-09-10T07:34:57.999Z","width":1200}
+{"level":"debug","message":"🔄 Updated glass price to:","timestamp":"2025-09-10T07:34:58.023Z"}
+{"fixedPartition":"noPartition","level":"debug","message":"🔍 Resolving type for:","noOfPanels":"2","timestamp":"2025-09-10T07:34:58.025Z"}
+{"level":"debug","message":"🔍 Mapping key:","timestamp":"2025-09-10T07:34:58.029Z"}
+{"level":"debug","message":"🔑 Resolved type key:","timestamp":"2025-09-10T07:34:58.030Z"}
+{"0":"type1","1":"type2","10":"type11","11":"type12","12":"type13","13":"type14","14":"type15","15":"type16","16":"type17","17":"type18","18":"type19","19":"type20","2":"type3","20":"type21","3":"type4","4":"type5","5":"type6","6":"type7","7":"type8","8":"type9","9":"type10","level":"debug","message":"📋 Available window types:","timestamp":"2025-09-10T07:34:58.031Z"}
+{"level":"debug","message":"🧮 Calculator type:","timestamp":"2025-09-10T07:34:58.050Z"}
+{"level":"debug","message":"✅ Calculation successful","timestamp":"2025-09-10T07:34:58.053Z"}
+{"level":"debug","message":"Getting cart for ID:","timestamp":"2025-09-10T07:34:58.170Z"}
+{"level":"debug","message":"Found items:","timestamp":"2025-09-10T07:34:58.188Z"}
+{"_id":null,"aluminiumFraming":8265,"glass":2015.0040300080598,"grandTotal":18447.465178560356,"guiders":392,"installation":4091.461148552297,"level":"debug","lock":1900,"message":"Calculated totals:","projectHandle":0,"rollers":800,"rubber":504,"sideArms":0,"timestamp":"2025-09-10T07:34:58.200Z","totalItems":1,"woolFile":480}
+{"level":"info","message":"✅ Route \"/api/calculations\" loaded with 2 handlers.","timestamp":"2025-09-10T07:40:20.016Z"}
+{"level":"info","message":"✅ Route \"/api/cart\" loaded with 5 handlers.","timestamp":"2025-09-10T07:40:20.041Z"}
+{"level":"info","message":"✅ Route \"/api/pricing\" loaded with 2 handlers.","timestamp":"2025-09-10T07:40:20.043Z"}
+{"level":"info","message":"✅ Route \"/api/preview\" loaded with 1 handlers.","timestamp":"2025-09-10T07:40:20.047Z"}
+{"level":"info","message":"✅ Express app has 12 middleware/routes mounted.","timestamp":"2025-09-10T07:40:20.050Z"}
+{"level":"info","message":"🚀 Server running on port 3000","timestamp":"2025-09-10T07:40:20.074Z"}
+{"level":"info","message":"✅ MongoDB connected successfully","timestamp":"2025-09-10T07:40:20.513Z"}
+{"level":"info","message":"✅ Route \"/api/calculations\" loaded with 2 handlers.","timestamp":"2025-09-10T07:43:28.553Z"}
+{"level":"info","message":"✅ Route \"/api/cart\" loaded with 5 handlers.","timestamp":"2025-09-10T07:43:28.579Z"}
+{"level":"info","message":"✅ Route \"/api/pricing\" loaded with 2 handlers.","timestamp":"2025-09-10T07:43:28.582Z"}
+{"level":"info","message":"✅ Route \"/api/preview\" loaded with 1 handlers.","timestamp":"2025-09-10T07:43:28.585Z"}
+{"level":"info","message":"✅ Express app has 12 middleware/routes mounted.","timestamp":"2025-09-10T07:43:28.588Z"}
+{"level":"info","message":"🚀 Server running on port 3000","timestamp":"2025-09-10T07:43:28.615Z"}
+{"level":"info","message":"✅ MongoDB connected successfully","timestamp":"2025-09-10T07:43:29.055Z"}
