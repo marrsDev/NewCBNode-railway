@@ -1,4 +1,4 @@
-// public/js/app.js - Fixed version
+// public/js/app.js
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM fully loaded');
