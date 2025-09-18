@@ -12,7 +12,6 @@
   <meta name="description" content="Aluminium windows quotation tool that uses current glass prices in Kenya. Get instant quotes for high quality aluminium windows tailored to your needs.">
 
 
-
 </head>
 
 <body>
@@ -503,11 +502,15 @@
 
     </section>
 
-
-
-
-
-
+    <div id="cookie-consent" class="cookie-consent">
+      <div class="cookie-content">
+        <p>🍪 This website uses cookies to save your quotation and perform calculations. Your data stays private and secure.</p>
+        <div class="cookie-buttons">
+          <button onclick="acceptCookies()" class="cookie-accept">Accept</button>
+          <button onclick="rejectCookies()" class="cookie-reject">Reject</button>
+        </div>
+      </div>
+    </div>
 
 
 <footer class="main-footer">
@@ -541,6 +544,7 @@
 
 
     </div>
+
 </footer>
 
 <!-- JavaScript to update the copyright year dynamically -->
@@ -554,10 +558,13 @@
 
 </div> <!-- Close the Alpine container -->
 
+<script src="/js/cartManager.js" defer></script>
+<script src="/js/cookieConsent.js" defer></script>
 <script src="/js/pinned-previews.js" defer></script>
 <script src="/js/gallery-js.js" defer></script>
-<script src="/js/cartManager.js" defer></script>
 <script type="module" src="/js/app.js" defer></script>
+
+<script>setTimeout(function(){if(typeof acceptCookies=="undefined"){window.acceptCookies=function(){localStorage.setItem("cookieConsent","accepted");document.getElementById("cookie-consent").style.display="none"};window.rejectCookies=function(){localStorage.setItem("cookieConsent","rejected");document.getElementById("cookie-consent").style.display="none";document.cookie="cartId=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/"};if(!localStorage.getItem("cookieConsent")){document.getElementById("cookie-consent").style.display="block"}}},50);</script>
 
 </body>
 
