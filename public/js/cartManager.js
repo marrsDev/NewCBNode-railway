@@ -1,35 +1,80 @@
 // public/js/cartManager.js
 class CartManager {
   constructor() {
-    this.cartId = this.getCartId();
+    // First check if we have a cart in URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const cartParam = urlParams.get('cart');
+    
+    if (cartParam) {
+      // Load from shared link
+      this.loadFromSharedCart(cartParam);
+    } else {
+      // Normal operation
+      this.cartId = this.generateCartId();
+    }
+    
     this.init();
+  }
+
+  generateCartId() {
+    try {
+      const consent = localStorage.getItem('cookieConsent');
+      
+      if (consent === 'rejected') {
+        if (!sessionStorage.getItem('sessionCartId')) {
+          sessionStorage.setItem('sessionCartId', `session-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`);
+        }
+        return sessionStorage.getItem('sessionCartId');
+      }
+      
+      // Check for existing cookie
+      const existingCartId = this.getCookie('cartId');
+      if (existingCartId) {
+        return existingCartId;
+      }
+      
+      // Create new cart ID and set cookie
+      const newCartId = `cart-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+      document.cookie = `cartId=${newCartId}; max-age=31536000; path=/; secure; samesite=strict`;
+      return newCartId;
+      
+    } catch (error) {
+      console.warn('Storage access blocked, using session ID');
+      return `fallback-${Date.now()}`;
+    }
+  }
+
+  getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+    return null;
   }
 
   init() {
     this.loadCart();
   }
 
-  getCartId() {
-    // Check if we already have a cart ID cookie
-    const cookies = document.cookie.split(';');
-    for (const cookie of cookies) {
-      const [name, value] = cookie.trim().split('=');
-      if (name === 'cartId') {
-        return value;
-      }
-    }
-    return null;
-  }
-
   async loadCart() {
     try {
-      const response = await fetch('/api/cart');
-      if (response.ok) {
-        const data = await response.json();
-        if (data.success) {
-          this.renderCart(data);
+      const response = await fetch('/api/cart', {
+        headers: {
+          'X-Cart-ID': this.cartId
         }
+      });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
+      
+      const data = await response.json();
+      
+      if (data.success) {
+        this.renderCart(data);
+      } else {
+        console.error('API returned error:', data.error);
+      }
+      
     } catch (error) {
       console.error('Error loading cart:', error);
     }
@@ -40,7 +85,8 @@ class CartManager {
       const response = await fetch('/api/cart/add', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'X-Cart-ID': this.cartId // Use stored ID
         },
         body: JSON.stringify(itemData)
       });
@@ -63,7 +109,10 @@ class CartManager {
   async removeItem(itemId) {
     try {
       const response = await fetch(`/api/cart/item/${itemId}`, {
-        method: 'DELETE'
+        method: 'DELETE',
+        headers: {
+          'X-Cart-ID': this.cartId
+        }
       });
 
       const data = await response.json();
@@ -86,7 +135,8 @@ class CartManager {
       const response = await fetch(`/api/cart/item/${itemId}/quantity`, {
         method: 'PUT',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'X-Cart-ID': this.cartId
         },
         body: JSON.stringify({ quantity })
       });
@@ -108,8 +158,12 @@ class CartManager {
 
   async clearCart() {
     try {
+      const cartId = this.getCartId();
       const response = await fetch('/api/cart/clear', {
-        method: 'DELETE'
+        method: 'DELETE',
+        headers: {
+          'X-Cart-ID': this.cartId
+        }
       });
 
       const data = await response.json();
@@ -222,6 +276,110 @@ class CartManager {
 
     cartPreview.innerHTML = html;
   }
+
+  exportQuote() {
+    try {
+      const consent = localStorage.getItem('cookieConsent');
+      
+      if (consent === 'rejected') {
+        return this.handleSessionCartExport();
+      }
+      
+      return this.handleCookieCartExport();
+      
+    } catch (error) {
+      console.error('Error exporting quote:', error);
+      alert('Sorry, there was an error preparing your quote for sharing.');
+      return false;
+    }
+  }
+
+  handleCookieCartExport() {
+    const cartData = {
+      cartId: this.cartId,
+      timestamp: Date.now(),
+      storageType: 'cookie'
+    };
+    
+    const encodedCart = btoa(JSON.stringify(cartData));
+    const shareableLink = `${window.location.origin}${window.location.pathname}?cart=${encodedCart}`;
+    
+    const whatsappMessage = `Hello! I'm interested in this window configuration: ${shareableLink}`;
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    
+    window.open(`https://api.whatsapp.com/send/?phone=254724275877&text=${encodedMessage}&app_absent=0`, '_blank');
+    return true;
+  }
+
+  async handleSessionCartExport() {
+    const shouldSave = confirm('To share your cart, we need to save it to our database first. This will allow us to retrieve it later. Continue?');
+    
+    if (!shouldSave) return false;
+    
+    try {
+      const persistentCartId = await this.saveSessionCartToDatabase();
+      if (!persistentCartId) return false;
+      
+      const cartData = {
+        cartId: persistentCartId,
+        timestamp: Date.now(),
+        storageType: 'database'
+      };
+      
+      const encodedCart = btoa(JSON.stringify(cartData));
+      const shareableLink = `${window.location.origin}${window.location.pathname}?cart=${encodedCart}`;
+      
+      const whatsappMessage = `Hello! I'm interested in this window configuration: ${shareableLink}`;
+      const encodedMessage = encodeURIComponent(whatsappMessage);
+      
+      window.open(`https://api.whatsapp.com/send/?phone=254724275877&text=${encodedMessage}&app_absent=0`, '_blank');
+      return true;
+      
+    } catch (error) {
+      console.error('Error saving session cart:', error);
+      alert('Failed to save your cart. Please try again or accept cookies to enable sharing.');
+      return false;
+    }
+  }
+
+  async saveSessionCartToDatabase() {
+    try {
+      const response = await fetch('/api/cart/save-session-cart', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Session-Cart-ID': this.cartId
+        }
+      });
+      
+      const data = await response.json();
+      return data.success ? data.persistentCartId : null;
+      
+    } catch (error) {
+      console.error('Error saving session cart to database:', error);
+      throw error;
+    }
+  }
+
+  loadFromSharedCart(cartParam) {
+    try {
+      const cartData = JSON.parse(atob(cartParam));
+      
+      if (cartData.storageType === 'database') {
+        this.cartId = cartData.cartId;
+        this.isPersistentCart = true;
+      } else {
+        this.cartId = cartData.cartId;
+        this.isPersistentCart = false;
+      }
+      
+      this.loadCart();
+      
+    } catch (error) {
+      console.error('Error loading shared cart:', error);
+      this.cartId = this.generateCartId();
+    }
+  }
 }
 
 // Initialize cart manager
@@ -229,3 +387,12 @@ const cartManager = new CartManager();
 
 // Make it available globally
 window.cartManager = cartManager;
+
+// Global function - REMOVE FROM INSIDE CLASS, PUT HERE
+window.exportQuote = function() {
+  if (window.cartManager) {
+    return cartManager.exportQuote();
+  }
+  console.error('Cart manager not initialized');
+  return false;
+};
