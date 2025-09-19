@@ -269,7 +269,7 @@ class CartManager {
         </div>
         <div class="cart-actions">
           <button onclick="cartManager.clearCart()" class="clear-cart-btn">Clear Cart</button>
-          <button onclick="exportQuote()" class="export-btn">Export Quote</button>
+          <button onclick="exportQuote()" class="export-btn">Contact Us with this order</button>
         </div>
       </div>
     `;
@@ -396,3 +396,4 @@ window.exportQuote = function() {
   console.error('Cart manager not initialized');
   return false;
 };
+
