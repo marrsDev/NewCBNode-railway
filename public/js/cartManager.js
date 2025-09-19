@@ -233,25 +233,26 @@ class CartManager {
     `;
 
     items.forEach(item => {
-      const itemTotal = item.unitPrice * item.quantity;
+      // Round the item total to whole number
+      const itemTotal = Math.round(item.unitPrice * item.quantity);
       html += `
         <div class="cart-item" data-id="${item._id}">
           <div class="preview">
             <img src="/img/labels/${item.type}.png" alt="${typeLabels[item.type] || item.type}" width="100" height="100">
           </div>
           <div class="description">
-            <h4>${item.measurements.width} × ${item.measurements.height} mm ${typeLabels[item.type] || item.type}</h4>
-            <p>${item.profileColour} Aluminium profiles</p>
+            <h4>${item.measurements.width} × ${item.measurements.height} mm</h4>
+            <p>[${item.profileColour}]</p>
             <p>${item.glassThickness} ${item.glassType} glass</p>
             <button class="remove-btn" onclick="cartManager.removeItem('${item._id}')">Remove</button>
           </div>
           <div class="price">
-            Ksh ${item.unitPrice.toLocaleString()}
+            Ksh ${Math.round(item.unitPrice).toLocaleString()}
           </div>
           <div class="quantity">
-            <button class="qty-btn minus" onclick="cartManager.updateQuantity('${item._id}', ${item.quantity - 1})">−</button>
-            <span class="qty-value">${item.quantity}</span>
             <button class="qty-btn plus" onclick="cartManager.updateQuantity('${item._id}', ${item.quantity + 1})">+</button>
+            <span class="qty-value">${item.quantity}</span>
+            <button class="qty-btn minus" onclick="cartManager.updateQuantity('${item._id}', ${item.quantity - 1})">−</button>
           </div>
           <div class="total">
             Ksh ${itemTotal.toLocaleString()}
@@ -260,11 +261,14 @@ class CartManager {
       `;
     });
 
+    // Round the grand total as well
+    const roundedGrandTotal = Math.round(totals.grandTotal || 0);
+    
     html += `
         <div class="cart-footer">
           <div class="total-items">Total Items: ${totals.totalItems || 0}</div>
           <div class="grand-total">
-            <strong>Grand Total:</strong> Ksh ${(totals.grandTotal || 0).toLocaleString()}
+            <strong>Grand Total:</strong> Ksh ${roundedGrandTotal.toLocaleString()}
           </div>
         </div>
         <div class="cart-actions">
@@ -396,4 +400,3 @@ window.exportQuote = function() {
   console.error('Cart manager not initialized');
   return false;
 };
-
