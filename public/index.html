@@ -564,7 +564,24 @@
 <script src="/js/gallery-js.js" defer></script>
 <script type="module" src="/js/app.js" defer></script>
 
-<script>setTimeout(function(){if(typeof acceptCookies=="undefined"){window.acceptCookies=function(){localStorage.setItem("cookieConsent","accepted");document.getElementById("cookie-consent").style.display="none"};window.rejectCookies=function(){localStorage.setItem("cookieConsent","rejected");document.getElementById("cookie-consent").style.display="none";document.cookie="cartId=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/"};if(!localStorage.getItem("cookieConsent")){document.getElementById("cookie-consent").style.display="block"}}},50);</script>
+<script>
+setTimeout(function(){
+    if(typeof window.acceptCookies == "undefined"){
+        window.acceptCookies = function(){
+            localStorage.setItem("cookieConsent","accepted");
+            document.getElementById("cookie-consent").style.display="none";
+        };
+        window.rejectCookies = function(){
+            localStorage.setItem("cookieConsent","rejected");
+            document.getElementById("cookie-consent").style.display="none";
+            document.cookie="cartId=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+        };
+        if(!localStorage.getItem("cookieConsent")){
+            document.getElementById("cookie-consent").style.display="block";
+        }
+    }
+}, 50);
+</script>
 
 </body>
 
