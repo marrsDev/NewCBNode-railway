@@ -1229,7 +1229,7 @@ section {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
     }
 
-    .main-navigation .menu.open {
+    .main-navigation .menu.active {
         display: flex;
     }
 
@@ -1514,5 +1514,6 @@ section {
 }
 
     
+
 
 
